@@ -22,9 +22,9 @@
   });
 
   var META = {
-    ru: { title: 'Ты художник — школа живописи и рисунка в Алматы | 15 лет, клуб ЮНЕСКО' },
-    kk: { title: 'Ты художник — Алматыдағы кескіндеме және сурет мектебі | 15 жыл, ЮНЕСКО клубы' },
-    en: { title: 'Ty Hudozhnik — Art School in Almaty: Painting & Drawing | 15 Years, UNESCO Club' }
+    ru: { title: 'Ты художник — школа академического рисунка и живописи в Алматы | 15 лет' },
+    kk: { title: 'Ты художник — Алматыдағы академиялық сурет және кескіндеме мектебі | 15 жыл' },
+    en: { title: 'Ty Hudozhnik — Academic Drawing & Painting School in Almaty | 15 Years' }
   };
 
   var KK = {
@@ -34,39 +34,42 @@
     'nav.ped': 'Ұстаздар', 'nav.team': 'Тимбилдинг',
 
     'hero.b1': 'Алматыда 15 жыл', 'hero.b2': 'ЮНЕСКО клубы', 'hero.b3': '2ГИС-те',
-    'hero.t1': 'Сурет салуды әркім үйрене алады.',
+    'hero.t1': 'Талант әркімнің бойында бар.',
     'hero.t2': 'Сен — суретшісің.',
-    'hero.sub': 'Балалар мен ересектерге арналған кескіндеме және сурет мектебі. Акрил мен майлы бояу, академиялық сурет пен сызу, батик пен киіз — 15 жылда шыңдалған әдістемемен. Еркін кесте, сабақтар жанып кетпейді.',
+    'hero.sub': 'Балалар мен ересектерге арналған мектеп. Ең алдымен — академиялық сурет және акрилмен, майлы бояумен кескіндеме, сондай-ақ батик пен киіз бойынша мастер-кластар. 15 жылда шыңдалған әдістеме. Еркін кесте, сабақтар жанып кетпейді.',
     'hero.cta1': 'Сынақ сабаққа жазылу', 'hero.cta2': 'Бағыттар мен бағалар',
     'hero.s1': 'жыл мектепке', 'hero.s2': 'оқыту бағыты', 'hero.s3': '2ГИС рейтингі', 'hero.s4': 'айына сабақ',
-    'hero.cap1': 'Жібектегі батик — мектеп жұмысы', 'hero.cap2': 'Киіз кескіндемесі',
+    'hero.cap1': 'Майлы бояумен кескіндеме', 'hero.cap2': 'Академиялық сурет',
 
-    'mq': 'Кескіндеме ✦ Академиялық сурет ✦ Сызу ✦ Батик ✦ Киіз басу ✦ Пастель ✦ Портрет ✦ Скетчинг ✦ Fashion-иллюстрация ✦ Аниме ✦ ',
+    'mq': 'Академиялық сурет ✦ Кескіндеме ✦ Батик ✦ Киіз ✦ Сызу ✦ Пастель ✦ Портрет ✦ Скетчинг ✦ Fashion-иллюстрация ✦ Аниме ✦ ',
 
     'dir.kick': 'Бағыттар', 'dir.t1': 'Өзіңе жақын', 'dir.t2': 'материалды тап',
-    'dir.lead': 'Акрилмен салған алғашқы мазоктан ЖОО-ға академиялық дайындыққа дейін. Топтар балаларға да, ересектерге де арналған, әркім өз бағдарламасымен жүреді.',
+    'dir.lead': 'Мектептің өзегі — академиялық сурет пен кескіндеме. Қатарында — батик пен киіз бойынша авторлық мастер-кластар және шығармашылық емтихандарға дайындық. Топтар балаларға да, ересектерге де арналған, әркім өз бағдарламасымен жүреді.',
     'd.cta': 'Жазылу →',
+    'd1.tag': 'Негізгі бағыт', 'd2.tag': 'Негізгі бағыт',
+    'd4.tag': 'Мастер-класс', 'd5.tag': 'Мастер-класс',
     'd1.h': 'Кескіндеме: акрил және майлы бояу',
     'd1.p': 'Бір мастер-класста дайын картина немесе 5–10 жұмыстан тұратын курс. Пейзаж, натюрморт, портрет — үйге дайын кенеппен қайтасыз.',
     'd1.pr': 'мастер-класс 6 000 ₸-ден',
     'd2.h': 'Академиялық сурет',
-    'd2.p': 'Қол мен көзді жаттықтыру: пастель, портрет, скетчинг. Кез келген суретші осы базадан басталады.',
-    'd2.pr': 'айына 25 000 ₸',
+    'd2.p': 'Біздің базамыз әрі басты бағытымыз: қол мен көзді жаттықтыру, құрылым, жарық-көлеңке, пропорция. Әрі қарай — пастель, портрет, скетчинг.',
+    'd2.pr': 'айына 35 000 ₸',
     'd3.tag': 'Талапкерлерге',
     'd3.h': 'Сызу және шығармашылық емтиханға дайындық',
     'd3.p': 'ЖОО талаптарына сай сурет пен сызу — тіпті нөлдік деңгейден. Нақты, «іске бағытталған» бағдарлама: оқушыларымыз бейінді ЖОО-ларға, колледждер мен мектептерге түсіп жатыр.',
-    'd3.pr': 'айына 25 000 ₸', 'd3.cta': 'Оқуға түсу тарихы →',
+    'd3.pr': 'айына 35 000 ₸', 'd3.cta': 'Оқуға түсу тарихы →',
     'd4.h': 'Батик — жібекке сурет салу',
-    'd4.p': 'Сирек бағыт: табиғи жібектегі авторлық орамал немесе панно. Жазылу аптасына бір рет, орын шектеулі.',
-    'd4.pr': 'мастер-класс 50 000 ₸-ден',
-    'd5.h': 'Киіз басу / фелтинг',
-    'd5.p': '«Жүнмен кескіндеме»: киізден жасалған жылы картиналар мен панно. Алдын ала жазылумен, аптасына бір рет.',
+    'd4.p': 'Сирек бағыт: табиғи жібектегі авторлық орамал немесе панно. А3 форматы, екі сағат, барлық материал кіреді. Жазылу аптасына бір рет.',
+    'd4.pr': '25 000 ₸ · А3 форматы, 2 сағат',
+    'd5.h': 'Киіз — сулай басу техникасы',
+    'd5.p': '«Жүнмен кескіндеме»: сулай басу техникасындағы жылы киіз панно. А4 форматы, екі сағат, материалдар кіреді.',
+    'd5.pr': '25 000 ₸ · А4 панно, 2 сағат',
     'd6.h': 'Fashion-иллюстрация және аниме',
     'd6.p': 'Стиль, кейіпкерлер, қозғалыс. «Өз дүниесін» салатын жасөспірімдер мен ересектерге — киім эскизінен мангаға дейін.',
-    'd6.pr': 'айына 25 000 ₸',
+    'd6.pr': 'айына 35 000 ₸',
     'd7.h': 'Балалар сабақтары',
     'd7.p': 'Бала топта өз жобасын жүргізеді — әр балаға ұстаз назары бөлек. Алғашқы сабақ — сынақ.',
-    'd7.pr': 'курс — айына 25 000 ₸-ден',
+    'd7.pr': 'айына 35 000 ₸',
 
     'met.kick': 'Әдістеме', 'met.t1': 'Ережелерін', 'met.t2': 'суретшілер ойлап тапқан',
     'met.lead': '15 жыл бойы біз тек техниканы емес, сабақ форматын да жетілдірдік — өнер өмірге кедергі емес, серік болуы үшін.',
@@ -74,7 +77,7 @@
     'met.i2h': 'Уақыт шектеусіз', 'met.i2p': 'Сабаққа келдіңіз бе — картина «дайынмын» дегенше күні бойы отыруға болады.',
     'met.i3h': 'Еркін кесте', 'met.i3p': 'Ұстаздар әрдайым орнында: өзіңізге ыңғайлы уақытта келіңіз. Айына 8 сабақ.',
     'met.i4h': 'Әркімнің өз жобасы', 'met.i4p': 'Сабақ топпен өтеді, бірақ әркім өз жұмысын өз қарқынымен жүргізеді — жеке талдаумен.',
-    'met.i5h': 'Офлайн және онлайн', 'met.i5p': 'Луганский көшесіндегі студияда немесе қашықтан оқыңыз. Алғашқы сабақ — сынақ.',
+    'met.i5h': 'Тек студияда, бетпе-бет', 'met.i5p': 'Луганский көшесіндегі студияда тікелей оқимыз: нағыз материалдар, мольберт қасында талдау. Алғашқы сабақ — сынақ.',
     'met.cta': 'Сынақ сабаққа жазылу',
 
     'usp.cap': 'Оқушы жұмыстарының көрмесі',
@@ -90,11 +93,17 @@
     'rev.gis': '2ГИС-те 57 баға · 33 пікір', 'rev.gisBtn': '2ГИС-тегі пікірлерді оқу',
     'rev.q1': '«Ты художник» студиясын шығармашылық емтихандарға жедел дайындалу үшін ұсынамын. Жасөспірім қысқа мерзімде суретін жақсартып, оқуға түсуге қажетті талаптар бойынша сызудың базалық дағдыларын меңгерді — сызуды іс жүзінде нөлден бастаған едік. Нақты, «іске бағытталған» бағдарлама, әр детальға көңіл бөлінеді, нәтижесі — оқуға түсу. «Ты художник» командасына рақмет!!!',
     'rev.a1': 'Светлана Д.', 'rev.r1': 'шығармашылық емтихандарға дайындық · оқуға түсті',
+    'rev.q2': 'Дина, қайырлы күн! София екі емтиханның қорытындысы бойынша мүмкін болатын 100 балдың 85-ін (35+50) жинап, Абай атындағы университеттің бейнелеу өнері мамандығына түсті. Сізге, Төлеубалаға, Дулатқа және мектебіміздің барлық ұстаздарына Софияның осы жылдардағы білімі жолындағы еңбектеріңіз, шыдамдылығыңыз, қолдауыңыз, сүйіспеншілігіңіз бен сеніміңіз үшін үлкен рақмет! Ол «қуаныштан ұшып жүр»! Сурет сапасын біз, кәсіби емес адамдар, бағалай алмаспыз, бірақ мамандар Софияға лайықты балл қойды. Барлығы сіздердің арқаларыңызда!',
+    'rev.a2': 'Софияның анасы', 'rev.r2': 'емтиханда 100-ден 85 балл · Абай атындағы университет, бейнелеу өнері',
+    'rev.s1': 'Т. Жүргенов атындағы ҚазҰӨА жанындағы мектеп-интернатқа қабылдау — тізімде бірінші орын',
+    'rev.s2': 'Сызудан 5-тен 5 балл — және дизайн мамандығына түсу',
+    'rev.s3': '«Мен грантқа түстім. Дайындағаныңыз үшін үлкен рақмет!»',
 
     'ped.kick': 'Ұжым', 'ped.t1': 'Өздері де жазатын', 'ped.t2': 'ұстаздар',
     'ped.1': '«Ты художник» мектебінің негізін қалаушы. IAIA қауымдастығының тең құрылтайшысы, мәдени-білім жобалары жөніндегі халықаралық директор, Еуразиялық дизайнерлер одағының мүшесі.',
     'ped.2': 'Бейнелеу өнері пәнінің оқытушысы, IAIA және ҚҰПУ мүшесі, сарапшы, зергер-дизайнер.',
     'ped.3': 'Т. Жүргенов атындағы ҚазҰӨА түлегі, «Кескіндеме, мүсін және дизайн» факультеті.',
+    'ped.4': 'Қазақстан Республикасы Суретшілер одағының мүшесі (2003 жылдан). ҚР Тұңғыш Президенті қорының «Бейнелеу өнері» номинациясы бойынша сыйлығының лауреаты — гобелен сериясы мен киіз кескіндемесі үшін (медаль, 2010). 2020 жылдан — «Таңшолпан» халықаралық тәуелсіз әйелдер қорының мүшесі.',
 
     'reg.kick': 'Мойындау', 'reg.t1': 'Әлем білетін', 'reg.t2': 'мектеп',
     'reg.1h': 'ЮНЕСКО клубы', 'reg.1p': 'Мектеп ЮНЕСКО клубтары қозғалысына кіреді.',
@@ -102,9 +111,6 @@
     'reg.2p': 'International Art Innovation Alliance — америкалық әріптестермен бірге құрылған қауымдастық. Дина Мертенова — тең құрылтайшысы.',
     'reg.3h': 'Еуразиялық дизайнерлер одағы', 'reg.3p': 'Кәсіби дизайнерлер одағының мүшелігі.',
     'reg.4h': '«Даму» мемлекеттік бағдарламасы', 'reg.4p': 'Мемлекеттік қолдау бағдарламасы бойынша жұмыс істейміз.',
-    'reg.5h': 'Корпоративтік клиенттер', 'reg.5p': 'ҚазМұнайГаз, Қазақтелеком және басқа компанияларға тимбилдингтер.',
-    'reg.6h': 'International Academy',
-    'reg.6p': 'American Diploma Program: АҚШ аттестатын онлайн алу, портфолио мен шетел университеттеріне түсуге көмек.',
 
     'pr.kick': 'Бағалар', 'pr.t1': 'Акварельдей', 'pr.t2': 'мөлдір',
     'pr.lead': 'Барлық материал бағаға кіреді. Нақты құнын жазылу кезінде растаймыз.',
@@ -113,18 +119,21 @@
     'pr.c1l2': 'Акрил, кенеп 40×50', 'pr.c1v2': '8 000 ₸-ден',
     'pr.c1l3': 'Акрил, кенеп 50×60', 'pr.c1v3': '12 000 ₸-ден',
     'pr.c1l4': 'Майлы бояу, кенеп 45×60', 'pr.c1v4': '25 000 ₸',
-    'pr.c1l5': 'Жібекке батик', 'pr.c1v5': '50 000 ₸-ден',
+    'pr.c1l5': 'Жібекке батик, А3 · 2 сағат', 'pr.c1v5': '25 000 ₸',
+    'pr.c1l6': 'Киіз, сулай басу, А4 панно · 2 сағат', 'pr.c1v6': '25 000 ₸',
+    'pr.c1note': 'Батик пен киіз — бір қатысушыға арналған баға, барлық материал кіреді.',
     'pr.flag': 'танымал',
     'pr.c2h': 'Курстар, айына 8 сабақ',
-    'pr.c2l1': 'Акрилмен кескіндеме', 'pr.c2v1': 'айына 25 000 ₸-ден',
-    'pr.c2l2': 'Академиялық сурет', 'pr.c2v2': 'айына 25 000 ₸',
-    'pr.c2l3': 'Сызу', 'pr.c2v3': 'айына 25 000 ₸',
-    'pr.c2l4': 'Пастель · портрет · скетчинг', 'pr.c2v4': 'айына 25 000 ₸',
-    'pr.c2l5': 'Fashion-иллюстрация · аниме', 'pr.c2v5': 'айына 25 000 ₸',
+    'pr.c2l1': 'Кескіндеме: акрил және майлы бояу', 'pr.c2v1': 'айына 35 000 ₸',
+    'pr.c2l2': 'Академиялық сурет', 'pr.c2v2': 'айына 35 000 ₸',
+    'pr.c2l3': 'Сызу', 'pr.c2v3': 'айына 35 000 ₸',
+    'pr.c2l4': 'Пастель · портрет · скетчинг', 'pr.c2v4': 'айына 35 000 ₸',
+    'pr.c2l5': 'Fashion-иллюстрация · аниме', 'pr.c2v5': 'айына 35 000 ₸',
+    'pr.c2note': 'Жылдық абонемент арзанырақ — айына 25 000 ₸.',
     'pr.c3h': 'Үлкен курстар',
     'pr.c3l1': 'Акрил, 5 картина курсы', 'pr.c3v1': '35 000 ₸-ден',
     'pr.c3l2': 'Майлы бояу, 10 картина курсы', 'pr.c3v2': '200 000 ₸',
-    'pr.c3l3': 'Батик, 5 орамал курсы', 'pr.c3v3': '220 000 ₸-ден',
+    'pr.c3l3': 'Батик, 5 орамал курсы', 'pr.c3v3': '100 000 ₸',
     'pr.c3note': 'Өз жұмыстарыңыздан жеке серия жинағыңыз келсе — тамаша таңдау.',
     'pr.cta': 'Бағаны WhatsApp-та нақтылау',
 
@@ -140,12 +149,12 @@
 
     'tm.kick': 'Компанияларға', 'tm.t1': 'Бояумен', 'tm.t2': 'тимбилдинг',
     'tm.p1': 'Корпоративтік арт-мастер-кластар: команда сертификат емес, өз қолымен салған картиналарын алып кетеді. Кескіндеме, батик, киіз — форматын командаңыз бен алаңыңызға қарай таңдаймыз.',
-    'tm.p2': 'Бізге ҚазМұнайГаз, Қазақтелеком және басқа компаниялар өз командаларын сеніп тапсырды.',
+    'tm.p2': 'Бізге командаларын сеніп тапсырғандар:',
     'tm.cta': 'Бағдарламаны сұрату', 'tm.cap': 'Киіз кескіндемесі бойынша мастер-класс',
 
     'sc.kick': 'Бізді қалай табуға болады', 'sc.t1': 'Луганский көшесіндегі', 'sc.t2': 'студия',
     'sc.c1h': 'Кесте',
-    'sc.c1l1': 'Сейсенбі — жексенбі', 'sc.c1l2': 'Түскі үзіліс', 'sc.c1l3': 'Дүйсенбі', 'sc.c1v3': 'демалыс',
+    'sc.c1l1': 'Сәрсенбі — жексенбі', 'sc.c1l2': 'Түскі үзіліс', 'sc.c1l3': 'Дүйсенбі, сейсенбі', 'sc.c1v3': 'демалыс',
     'sc.c1note': 'Сабақтар алдын ала жазылумен өтеді. Батик пен киіз — аптасына бір рет, орынды ертерек брондаңыз.',
     'sc.c2h': 'Мекенжай',
     'sc.c2p': 'Алматы қ., Луганский к-сі, 5, 69-кеңсе (1-қабат), Медеу ауданы',
@@ -177,39 +186,42 @@
     'nav.ped': 'Teachers', 'nav.team': 'Team building',
 
     'hero.b1': '15 years in Almaty', 'hero.b2': 'UNESCO club', 'hero.b3': 'on 2GIS',
-    'hero.t1': 'Anyone can learn to paint.',
+    'hero.t1': 'Talent is in everyone.',
     'hero.t2': 'You are an artist.',
-    'hero.sub': 'A school of painting and drawing for children and adults. Acrylic and oil, academic drawing and technical drafting, batik and felt — with a method refined over 15 years. Flexible schedule, lessons never expire.',
+    'hero.sub': 'A school for children and adults. First of all — academic drawing and painting in acrylic and oil, plus workshops in batik and felt. A method refined over 15 years. Flexible schedule, lessons never expire.',
     'hero.cta1': 'Book a trial lesson', 'hero.cta2': 'Programs & prices',
     'hero.s1': 'years of school', 'hero.s2': 'study programs', 'hero.s3': '2GIS rating', 'hero.s4': 'lessons a month',
-    'hero.cap1': 'Silk batik — made at our school', 'hero.cap2': 'Wool painting',
+    'hero.cap1': 'Oil painting', 'hero.cap2': 'Academic drawing',
 
-    'mq': 'Painting ✦ Academic drawing ✦ Technical drafting ✦ Batik ✦ Felting ✦ Pastel ✦ Portrait ✦ Sketching ✦ Fashion illustration ✦ Anime ✦ ',
+    'mq': 'Academic drawing ✦ Painting ✦ Batik ✦ Felt ✦ Technical drafting ✦ Pastel ✦ Portrait ✦ Sketching ✦ Fashion illustration ✦ Anime ✦ ',
 
     'dir.kick': 'Programs', 'dir.t1': 'Find', 'dir.t2': 'your medium',
-    'dir.lead': 'From your first acrylic stroke to academic preparation for art universities. Groups for children and adults — everyone follows their own program.',
+    'dir.lead': 'The core of the school is academic drawing and painting. Alongside them — our own batik and felt workshops and preparation for creative entrance exams. Groups for children and adults; everyone follows their own program.',
     'd.cta': 'Sign up →',
+    'd1.tag': 'Core program', 'd2.tag': 'Core program',
+    'd4.tag': 'Workshop', 'd5.tag': 'Workshop',
     'd1.h': 'Painting: acrylic & oil',
     'd1.p': 'A finished painting in one workshop, or a course of 5–10 works. Landscapes, still lifes, portraits — you leave with a canvas of your own.',
     'd1.pr': 'workshops from 6,000 ₸',
     'd2.h': 'Academic drawing',
-    'd2.p': 'Training the hand and the eye: pastel, portrait, sketching. The foundation every artist starts from.',
-    'd2.pr': '25,000 ₸ / month',
+    'd2.p': 'Our foundation and main program: training the hand and the eye — construction, light and shade, proportion. Then pastel, portrait, sketching.',
+    'd2.pr': '35,000 ₸ / month',
     'd3.tag': 'For applicants',
     'd3.h': 'Technical drafting & exam preparation',
     'd3.p': 'Drawing and drafting tailored to university requirements — even from zero. A focused, no-fluff program: our students get into art universities, colleges and schools.',
-    'd3.pr': '25,000 ₸ / month', 'd3.cta': 'An admission story →',
+    'd3.pr': '35,000 ₸ / month', 'd3.cta': 'An admission story →',
     'd4.h': 'Batik — silk painting',
-    'd4.p': 'A rare craft: your own scarf or panel on natural silk. Sessions once a week, places are limited.',
-    'd4.pr': 'workshops from 50,000 ₸',
-    'd5.h': 'Felting',
-    'd5.p': '“Painting with wool”: warm felt pictures and panels. Once a week, by appointment.',
+    'd4.p': 'A rare craft: your own scarf or panel on natural silk. A3 format, two hours, all materials included. Sessions once a week.',
+    'd4.pr': '25,000 ₸ · A3, 2 hours',
+    'd5.h': 'Felt — wet felting',
+    'd5.p': '“Painting with wool”: a warm felt panel made by wet felting. A4 format, two hours, materials included.',
+    'd5.pr': '25,000 ₸ · A4 panel, 2 hours',
     'd6.h': 'Fashion illustration & anime',
     'd6.p': 'Style, characters, movement. For teens and adults who draw their own worlds — from clothing sketches to manga.',
-    'd6.pr': '25,000 ₸ / month',
+    'd6.pr': '35,000 ₸ / month',
     'd7.h': 'Classes for kids',
     'd7.p': 'Each child leads their own project within the group — with the teacher’s personal attention. The first lesson is a trial.',
-    'd7.pr': 'courses from 25,000 ₸ / month',
+    'd7.pr': '35,000 ₸ / month',
 
     'met.kick': 'Method', 'met.t1': 'Rules invented', 'met.t2': 'by artists',
     'met.lead': 'For 15 years we refined not only technique but the format itself — so that art fits into your life, not the other way around.',
@@ -217,7 +229,7 @@
     'met.i2h': 'No time limit', 'met.i2p': 'Once you come in, stay all day if you like — until the painting says “done”.',
     'met.i3h': 'Flexible schedule', 'met.i3p': 'Teachers are always in the studio: come when it suits you. 8 lessons a month.',
     'met.i4h': 'A personal project for everyone', 'met.i4p': 'Classes are in groups, but everyone works on their own piece at their own pace — with personal feedback.',
-    'met.i5h': 'Offline & online', 'met.i5p': 'Study at our studio on Luganskogo street or remotely. The first lesson is a trial.',
+    'met.i5h': 'In the studio only', 'met.i5p': 'We teach in person at our studio on Luganskogo: real materials, feedback right at the easel. The first lesson is a trial.',
     'met.cta': 'Book a trial lesson',
 
     'usp.cap': 'Exhibition of student works',
@@ -233,11 +245,17 @@
     'rev.gis': '57 ratings · 33 reviews on 2GIS', 'rev.gisBtn': 'Read reviews on 2GIS',
     'rev.q1': 'I recommend the Ty Hudozhnik studio for fast-track preparation for creative entrance exams. In a short time my teenager improved his drawing and mastered the basics of technical drafting to admission requirements — even though we started drafting practically from zero. A clear, to-the-point program, attention to detail, and the result — admission. Thank you to the whole Ty Hudozhnik team!!!',
     'rev.a1': 'Svetlana D.', 'rev.r1': 'exam preparation · admitted',
+    'rev.q2': 'Dina, good afternoon! Across two exams Sofia scored 85 points out of 100 (35+50) and was admitted to Abai University to study Fine Arts. Thank you so much to you, Toleubala, Dulat and every single teacher of our school for the work, patience, support, love, faith and care you put into Sofia’s studies over all the years she has spent at Ty Hudozhnik! She is “beside herself with joy”! I am no professional and cannot judge the quality of her drawing, but the professionals gave Sofia the score she deserved. And it is all thanks to you!',
+    'rev.a2': 'Sofia’s mother', 'rev.r2': '85 out of 100 at the exams · Abai University, Fine Arts',
+    'rev.s1': 'Admission to the boarding school of the Zhurgenov Academy of Arts — first on the list',
+    'rev.s2': '5 out of 5 in technical drafting — and a place on a design program',
+    'rev.s3': '“I got in on a state grant. Thank you so much for the preparation!”',
 
     'ped.kick': 'Team', 'ped.t1': 'Teachers who', 'ped.t2': 'paint themselves',
     'ped.1': 'Founder of the Ty Hudozhnik school. Co-founder of IAIA, international director for cultural and educational projects, member of the Eurasian Union of Designers.',
     'ped.2': 'Art teacher, member of IAIA and KazNPU, expert, jewelry designer.',
     'ped.3': 'Graduate of the Zhurgenov Kazakh National Academy of Arts, faculty of Painting, Sculpture and Design.',
+    'ped.4': 'Member of the Union of Artists of the Republic of Kazakhstan since 2003. Laureate of the First President of Kazakhstan Foundation prize in Fine Arts — for a series of tapestries and felt painting (medal, 2010). Member of the Tansholpan international independent women’s foundation since 2020.',
 
     'reg.kick': 'Recognition', 'reg.t1': 'A school', 'reg.t2': 'known worldwide',
     'reg.1h': 'UNESCO club', 'reg.1p': 'The school is part of the UNESCO clubs movement.',
@@ -245,9 +263,6 @@
     'reg.2p': 'International Art Innovation Alliance — an association co-founded with American colleagues. Dina Mertenova is a co-founder.',
     'reg.3h': 'Eurasian Union of Designers', 'reg.3p': 'Membership in the professional union of designers.',
     'reg.4h': 'State program “Damu”', 'reg.4p': 'We work under the state support program.',
-    'reg.5h': 'Corporate clients', 'reg.5p': 'Team-building events for KazMunayGas, Kazakhtelecom and other companies.',
-    'reg.6h': 'International Academy',
-    'reg.6p': 'American Diploma Program: a US high-school diploma online, plus portfolio and admission support for universities abroad.',
 
     'pr.kick': 'Prices', 'pr.t1': 'Clear', 'pr.t2': 'as watercolor',
     'pr.lead': 'All materials are included. We confirm the exact price when you book.',
@@ -256,18 +271,21 @@
     'pr.c1l2': 'Acrylic, canvas 40×50', 'pr.c1v2': 'from 8,000 ₸',
     'pr.c1l3': 'Acrylic, canvas 50×60', 'pr.c1v3': 'from 12,000 ₸',
     'pr.c1l4': 'Oil, canvas 45×60', 'pr.c1v4': '25,000 ₸',
-    'pr.c1l5': 'Silk batik', 'pr.c1v5': 'from 50,000 ₸',
+    'pr.c1l5': 'Silk batik, A3 · 2 hours', 'pr.c1v5': '25,000 ₸',
+    'pr.c1l6': 'Felt, wet felting, A4 panel · 2 hours', 'pr.c1v6': '25,000 ₸',
+    'pr.c1note': 'Batik and felt — price per participant, all materials included.',
     'pr.flag': 'popular',
     'pr.c2h': 'Courses, 8 lessons a month',
-    'pr.c2l1': 'Acrylic painting', 'pr.c2v1': 'from 25,000 ₸/mo',
-    'pr.c2l2': 'Academic drawing', 'pr.c2v2': '25,000 ₸/mo',
-    'pr.c2l3': 'Technical drafting', 'pr.c2v3': '25,000 ₸/mo',
-    'pr.c2l4': 'Pastel · portrait · sketching', 'pr.c2v4': '25,000 ₸/mo',
-    'pr.c2l5': 'Fashion illustration · anime', 'pr.c2v5': '25,000 ₸/mo',
+    'pr.c2l1': 'Painting: acrylic & oil', 'pr.c2v1': '35,000 ₸/mo',
+    'pr.c2l2': 'Academic drawing', 'pr.c2v2': '35,000 ₸/mo',
+    'pr.c2l3': 'Technical drafting', 'pr.c2v3': '35,000 ₸/mo',
+    'pr.c2l4': 'Pastel · portrait · sketching', 'pr.c2v4': '35,000 ₸/mo',
+    'pr.c2l5': 'Fashion illustration · anime', 'pr.c2v5': '35,000 ₸/mo',
+    'pr.c2note': 'A yearly pass works out cheaper — 25,000 ₸ per month.',
     'pr.c3h': 'Big courses',
     'pr.c3l1': 'Acrylic, 5-painting course', 'pr.c3v1': 'from 35,000 ₸',
     'pr.c3l2': 'Oil, 10-painting course', 'pr.c3v2': '200,000 ₸',
-    'pr.c3l3': 'Batik, 5-scarf course', 'pr.c3v3': 'from 220,000 ₸',
+    'pr.c3l3': 'Batik, 5-scarf course', 'pr.c3v3': '100,000 ₸',
     'pr.c3note': 'Perfect if you want to build your own series of works.',
     'pr.cta': 'Confirm the price on WhatsApp',
 
@@ -283,12 +301,12 @@
 
     'tm.kick': 'For companies', 'tm.t1': 'Team building', 'tm.t2': 'with paint',
     'tm.p1': 'Corporate art workshops after which your team takes home not certificates, but their own paintings. Painting, batik, felt — we tailor the format to your team and venue.',
-    'tm.p2': 'KazMunayGas, Kazakhtelecom and other companies have already trusted us with their teams.',
+    'tm.p2': 'Teams that have already trusted us:',
     'tm.cta': 'Request a program', 'tm.cap': 'Wool painting workshop',
 
     'sc.kick': 'How to find us', 'sc.t1': 'The studio', 'sc.t2': 'on Luganskogo',
     'sc.c1h': 'Opening hours',
-    'sc.c1l1': 'Tuesday — Sunday', 'sc.c1l2': 'Lunch break', 'sc.c1l3': 'Monday', 'sc.c1v3': 'closed',
+    'sc.c1l1': 'Wednesday — Sunday', 'sc.c1l2': 'Lunch break', 'sc.c1l3': 'Monday, Tuesday', 'sc.c1v3': 'closed',
     'sc.c1note': 'Classes are by appointment. Batik and felting run once a week — book in advance.',
     'sc.c2h': 'Address',
     'sc.c2p': 'Almaty, Luganskogo st. 5, office 69 (1st floor), Medeu district',
@@ -333,7 +351,9 @@
     document.documentElement.lang = lang === 'kk' ? 'kk' : lang;
     document.title = META[lang].title;
     document.querySelectorAll('.lang-switch button').forEach(function (b) {
-      b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+      var on = b.getAttribute('data-lang') === lang;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-pressed', String(on));
     });
     try { localStorage.setItem('th-lang', lang); } catch (e) { /* приватный режим */ }
   }
@@ -390,7 +410,7 @@
 
   var revealTargets = document.querySelectorAll(
     '.kicker, .h2, .lead, .bcard, .met-grid li, .reg-card, .price-card, .ped-card, ' +
-    '.sched-card, .review-card, .gis-card, .mural-grid figure, .tick-list li, .b2b-chips, .lead-form'
+    '.sched-card, .rev-top, .rev-rail, .mural-grid figure, .tick-list li, .b2b-chips, .clients-row, .lead-form'
   );
   revealTargets.forEach(function (el, i) {
     el.classList.add('rv');
@@ -428,6 +448,67 @@
       });
     }, { threshold: 0.6 });
     nums.forEach(function (el) { cio.observe(el); });
+  }
+
+  /* ============================================================
+     4b. Горизонтальная лента отзывов: стрелки + состояние
+     ============================================================ */
+  var revRail = document.getElementById('revRail');
+  if (revRail) {
+    var arrows = document.querySelectorAll('.rev-arrow');
+    function railStep() {
+      var first = revRail.firstElementChild;
+      if (!first) return revRail.clientWidth * 0.8;
+      var gap = parseFloat(getComputedStyle(revRail).columnGap || '22') || 22;
+      return first.getBoundingClientRect().width + gap;
+    }
+    function syncArrows() {
+      var max = revRail.scrollWidth - revRail.clientWidth - 2;
+      arrows.forEach(function (b) {
+        var dir = parseInt(b.getAttribute('data-dir'), 10);
+        b.disabled = dir < 0 ? revRail.scrollLeft <= 2 : revRail.scrollLeft >= max;
+      });
+    }
+    arrows.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var dir = parseInt(b.getAttribute('data-dir'), 10);
+        revRail.scrollBy({ left: dir * railStep(), behavior: reduceMotion ? 'auto' : 'smooth' });
+      });
+    });
+    revRail.addEventListener('scroll', syncArrows, { passive: true });
+    window.addEventListener('resize', syncArrows);
+    syncArrows();
+  }
+
+  /* ============================================================
+     4c. Лайтбокс для скриншотов отзывов
+     ============================================================ */
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lbImg');
+  var lbOpener = null;
+  function closeLb() {
+    if (!lb || lb.hidden) return;
+    lb.hidden = true;
+    lbImg.src = '';
+    document.body.classList.remove('menu-open');
+    if (lbOpener) { lbOpener.focus(); lbOpener = null; }
+  }
+  if (lb) {
+    document.querySelectorAll('.js-shot').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var img = btn.querySelector('img');
+        lbImg.src = btn.getAttribute('data-src');
+        lbImg.alt = img ? img.alt : '';
+        lb.hidden = false;
+        lbOpener = btn;
+        document.body.classList.add('menu-open');
+        document.getElementById('lbClose').focus();
+      });
+    });
+    lb.addEventListener('click', function (e) {
+      if (e.target === lb || e.target.closest('#lbClose')) closeLb();
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
   }
 
   /* ============================================================
