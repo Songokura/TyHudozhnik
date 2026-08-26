@@ -490,7 +490,7 @@
     if (!lb || lb.hidden) return;
     lb.hidden = true;
     lbImg.src = '';
-    document.body.classList.remove('menu-open');
+    document.body.classList.remove('no-scroll');
     if (lbOpener) { lbOpener.focus(); lbOpener = null; }
   }
   if (lb) {
@@ -501,7 +501,7 @@
         lbImg.alt = img ? img.alt : '';
         lb.hidden = false;
         lbOpener = btn;
-        document.body.classList.add('menu-open');
+        document.body.classList.add('no-scroll');
         document.getElementById('lbClose').focus();
       });
     });

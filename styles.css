@@ -110,11 +110,27 @@ body::after {
 /* Бургер */
 .burger { display: none; width: 44px; height: 44px; background: rgba(12,46,64,.05); border: 1px solid rgba(12,46,64,.16); border-radius: 12px; cursor: pointer; position: relative; z-index: 70; }
 .burger span { display: block; width: 20px; height: 2px; background: var(--ink); margin: 4px auto; border-radius: 2px; transition: .3s; }
-body.menu-open .burger { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.3); }
-body.menu-open .burger span { background: #fff; }
-.burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+
+/* ---------- открытое меню: шапка переходит в тёмный режим ---------- *
+   Иначе «прилипшая» светлая шапка (.scrolled) кладёт белую полосу поверх
+   тёмного оверлея — и белый крестик на ней пропадает.                  */
+body.menu-open .site-header.scrolled { background: transparent; box-shadow: none; backdrop-filter: none; }
+body.menu-open .logo-text { color: #fff; }
+body.menu-open .logo-text em { color: rgba(255,255,255,.62); }
+body.menu-open .logo-mark { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.24); }
+body.menu-open .lang-switch { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.28); }
+body.menu-open .lang-switch button { color: rgba(255,255,255,.82); }
+body.menu-open .lang-switch button.active { background: #fff; color: var(--deep-2); }
+/* Крестик — плотная белая кнопка с тёмным X: читается и на тёмном меню, и на светлой шапке */
+body.menu-open .burger {
+  background: #fff; border-color: #fff;
+  box-shadow: 0 12px 30px -10px rgba(0,0,0,.55);
+}
+body.menu-open .burger span { background: var(--deep-2); }
+.burger.open span { width: 23px; height: 2.6px; }
+.burger.open span:nth-child(1) { transform: translateY(6.6px) rotate(45deg); }
 .burger.open span:nth-child(2) { opacity: 0; }
-.burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+.burger.open span:nth-child(3) { transform: translateY(-6.6px) rotate(-45deg); }
 
 /* Мобильное меню */
 .mobile-menu {
@@ -132,7 +148,7 @@ body.menu-open .burger span { background: #fff; }
 .mm-contacts { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px 22px; }
 .mm-contacts a { color: rgba(255,255,255,.9); font-size: 16px; }
 .mm-contacts a:last-child { color: #7FE0A7; font-weight: 600; }
-body.menu-open { overflow: hidden; }
+body.menu-open, body.no-scroll { overflow: hidden; }
 
 /* ============================================================
    HERO
