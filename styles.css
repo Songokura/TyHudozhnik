@@ -23,7 +23,7 @@
   --grad-sunset: linear-gradient(100deg, #FFAE63, #F0708C);
   --grad-sea: linear-gradient(160deg, #12435A 0%, #0F5F60 55%, #17877E 130%);
   --grad-dawn: linear-gradient(168deg, #FFFDF7 0%, #F5F0E4 44%, #E4F0EC 100%);
-  --font-d: "Playfair Display", "Rubik", Georgia, serif;
+  --font-d: "Playfair Display", "Literata", Georgia, serif;
   --font-t: "Rubik", "Segoe UI", Arial, sans-serif;
   --shadow-card: 0 18px 45px -18px rgba(12, 46, 64, .28);
   --r: 22px;
@@ -289,7 +289,8 @@ body.menu-open { overflow: hidden; }
   content: ""; position: absolute; right: -180px; top: -120px; width: 560px; height: 560px;
   background: radial-gradient(circle, rgba(15,123,116,.16), transparent 65%); pointer-events: none;
 }
-.met-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: met; margin-top: 46px; }
+.met-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px; counter-reset: met; margin-top: 46px; }
+.met-grid li { grid-column: span 2; }
 .met-grid li {
   background: #fff; border: 1px solid rgba(12,46,64,.08);
   border-radius: var(--r); padding: 26px; position: relative;
@@ -297,7 +298,7 @@ body.menu-open { overflow: hidden; }
   transition: transform .35s, box-shadow .35s;
 }
 .met-grid li:hover { transform: translateY(-6px); box-shadow: 0 24px 46px -22px rgba(12,46,64,.42); }
-.met-grid li:nth-child(4), .met-grid li:nth-child(5) { grid-column: span 1; }
+.met-grid li:nth-child(4), .met-grid li:nth-child(5) { grid-column: span 3; }
 .met-grid i {
   font-style: normal; font-family: var(--font-d); font-weight: 800; font-size: 42px;
   background: var(--grad-sunset); -webkit-background-clip: text; background-clip: text; color: transparent;
@@ -387,9 +388,9 @@ body.menu-open { overflow: hidden; }
 }
 .shot-btn {
   display: block; width: 100%; padding: 0; border: 0; cursor: zoom-in; background: #E9E4DA;
-  border-radius: 14px; overflow: hidden; position: relative; flex: 1 1 auto;
+  border-radius: 14px; overflow: hidden; position: relative; flex: 1 1 auto; min-height: 260px;
 }
-.shot-btn img { width: 100%; height: 100%; max-height: 340px; object-fit: cover; object-position: top center; }
+.shot-btn img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top center; }
 .shot-zoom {
   position: absolute; right: 12px; bottom: 12px; width: 40px; height: 40px; border-radius: 50%;
   background: rgba(12,46,64,.72); color: #fff; display: flex; align-items: center; justify-content: center;
@@ -397,7 +398,7 @@ body.menu-open { overflow: hidden; }
 }
 .shot-zoom svg { width: 20px; height: 20px; }
 .shot-btn:hover .shot-zoom { transform: scale(1.1); background: var(--teal); }
-.review-shot figcaption { font-size: 13px; color: var(--ink-soft); padding: 14px 6px 12px; line-height: 1.5; }
+.review-shot figcaption { font-size: 13px; color: var(--ink-soft); padding: 14px 6px 12px; line-height: 1.5; flex: 0 0 auto; }
 
 /* ============================================================
    ПЕДАГОГИ
@@ -413,7 +414,9 @@ body.menu-open { overflow: hidden; }
 .ped-photo::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 5px var(--cream); }
 .ped-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .6s; }
 .ped-card:hover .ped-photo img { transform: scale(1.06); }
-.ped-card h3 { font-family: var(--font-d); font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+/* Имена педагогов — Literata: в Playfair нет ә ғ қ ң ө ұ ү һ,
+   из-за чего «Төлеубала Айдарқызы» рендерился двумя шрифтами сразу */
+.ped-card h3 { font-family: "Literata", Georgia, serif; font-size: 21px; font-weight: 700; letter-spacing: -.005em; margin-bottom: 8px; }
 .ped-card p { font-size: 13.5px; color: var(--ink-soft); max-width: 34ch; margin: 0 auto; }
 
 /* ============================================================
@@ -572,6 +575,8 @@ body.menu-open { overflow: hidden; }
   .bc-7, .bc-5 { grid-column: span 6; }
   .bc-4 { grid-column: span 6; }
   .met-grid { grid-template-columns: repeat(2, 1fr); }
+  .met-grid li, .met-grid li:nth-child(4) { grid-column: span 1; }
+  .met-grid li:nth-child(5) { grid-column: span 2; }
   .reg-grid { grid-template-columns: repeat(2, 1fr); }
   .reg-iaia { grid-column: span 2; }
   .ped-grid { grid-template-columns: repeat(2, 1fr); gap: 34px 22px; }
@@ -607,6 +612,7 @@ body.menu-open { overflow: hidden; }
   .bc-7, .bc-5, .bc-4 { grid-column: span 12; }
   .bcard { min-height: 380px; }
   .met-grid { grid-template-columns: 1fr; }
+  .met-grid li, .met-grid li:nth-child(4), .met-grid li:nth-child(5) { grid-column: span 1; }
   .reg-grid { grid-template-columns: 1fr; }
   .reg-iaia { grid-column: span 1; flex-direction: column; align-items: flex-start; }
   .ped-grid { grid-template-columns: 1fr; gap: 40px; }
