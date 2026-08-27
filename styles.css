@@ -476,6 +476,27 @@ body.menu-open, body.no-scroll { overflow: hidden; }
 /* ============================================================
    ЦЕНЫ
    ============================================================ */
+/* ============================================================
+   НАМ ДОВЕРЯЮТ — стена логотипов
+   ============================================================ */
+.trust { background: var(--cream); }
+.logo-wall {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.logo-cell {
+  background: #fff; border: 1px solid rgba(12,46,64,.08); border-radius: 18px;
+  min-height: 152px; padding: 26px 30px;
+  display: flex; align-items: center; justify-content: center; min-width: 0;
+  box-shadow: 0 14px 32px -22px rgba(12,46,64,.4);
+  transition: transform .35s cubic-bezier(.3,0,.2,1), box-shadow .35s, border-color .35s;
+}
+.logo-cell:hover { transform: translateY(-5px); box-shadow: 0 24px 44px -22px rgba(12,46,64,.45); border-color: rgba(12,46,64,.16); }
+/* --lw и --lh задают оптический размер каждого логотипа отдельно: у широкого
+   словесного знака ограничивает ширина, у квадратной эмблемы — высота.
+   Одной общей рамкой их не выровнять — знаки «проваливаются» по площади. */
+.logo-cell img { width: auto; height: auto; max-width: min(var(--lw, 190px), 100%); max-height: var(--lh, 56px); object-fit: contain; }
+
 .tseny { background: var(--paper); }
 .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
 .price-card {
@@ -646,6 +667,9 @@ body.menu-open, body.no-scroll { overflow: hidden; }
   .grid-2 { grid-template-columns: 1fr; gap: 40px; }
   .grid-2r figure { order: 0; }
   .ped-grid { grid-template-columns: repeat(2, 1fr); gap: 34px 18px; }
+  .logo-wall { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .logo-cell { min-height: 112px; padding: 18px 16px; border-radius: 15px; }
+  .logo-cell img { max-width: min(calc(var(--lw, 190px) * .8), 100%); max-height: calc(var(--lh, 56px) * .8); }
   .section { padding: 72px 0; }
 }
 
