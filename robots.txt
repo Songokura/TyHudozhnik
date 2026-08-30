@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://songokura.github.io/TyHudozhnik/sitemap.xml
+Sitemap: https://tyhudozhnik.merten-academy.kz/sitemap.xml

@@ -3,3 +3,5 @@ _project/
 .DS_Store
 *.log
 _shots/
+_deploy/
+*.zip
