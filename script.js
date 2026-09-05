@@ -111,7 +111,7 @@
     'rev.s8': '«Верониканың суреті ең үздігі болды, балалар оған қарап қайталады»',
 
     'cl.kick': 'Серіктестер мен клиенттер', 'cl.t1': 'Бізге', 'cl.t2': 'сенеді',
-    'cl.lead': 'Корпоративтік мастер-кластар, тимбилдингтер және бірлескен жобалар. 15 жыл ішінде мектеп халықаралық компаниялармен, мемлекеттік құрылымдармен және БАҚ-пен жұмыс істеді.',
+    'cl.lead': 'Корпоративтік мастер-кластар, тимбилдингтер және бірлескен жобалар. 15 жыл ішінде мектеп халықаралық компаниялармен, мемлекеттік құрылымдармен, қорлармен және БАҚ-пен жұмыс істеді.',
 
     'ped.kick': 'Ұжым', 'ped.t1': 'Өздері де жазатын', 'ped.t2': 'ұстаздар',
     'ped.1': '«Ты художник» мектебінің негізін қалаушы. IAIA қауымдастығының тең құрылтайшысы, мәдени-білім жобалары жөніндегі халықаралық директор, Еуразиялық дизайнерлер одағының мүшесі.',
@@ -277,7 +277,7 @@
     'rev.s8': '“Veronika had the best drawing in class, the other kids copied hers”',
 
     'cl.kick': 'Partners and clients', 'cl.t1': 'Companies that', 'cl.t2': 'trust us',
-    'cl.lead': 'Corporate workshops, team-building sessions and joint projects. Over 15 years the school has worked with international companies, government bodies and media.',
+    'cl.lead': 'Corporate workshops, team-building sessions and joint projects. Over 15 years the school has worked with international companies, government bodies, foundations and media.',
 
     'ped.kick': 'Team', 'ped.t1': 'Teachers who', 'ped.t2': 'paint themselves',
     'ped.1': 'Founder of the Ty Hudozhnik school. Co-founder of IAIA, international director for cultural and educational projects, member of the Eurasian Union of Designers.',
