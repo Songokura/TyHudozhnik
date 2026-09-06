@@ -1,7 +1,7 @@
 /* ============================================================
    ТЫ ХУДОЖНИК — script.js
    i18n (RU/KK/EN) · меню · scroll-анимации · форма → WhatsApp ·
-   чистые обработчики js-call / js-wa для будущих gtag-конверсий
+   конверсии Google Ads (AW-18428216713) на tel / WhatsApp / форме
    ============================================================ */
 (function () {
   'use strict';
@@ -540,6 +540,34 @@
   }
 
   /* ============================================================
+     4b. Конверсии Google Ads (AW-18428216713)
+         phone_call - «Интерактивные номера телефонов»
+         lead_form  - «Отправка формы для потенциальных клиентов»
+         contact    - «Контакт» (WhatsApp)
+     ============================================================ */
+  var CONV = {
+    phone_call: 'AW-18428216713/Mt22COudxe8cEImLodNE',
+    lead_form:  'AW-18428216713/j-IbCLy4vO8cEImLodNE',
+    contact:    'AW-18428216713/nYk8CJy8vO8cEImLodNE'
+  };
+
+  /* Отправить конверсию. cb (если передан) вызывается после ответа gtag
+     или по таймауту 900 мс - чтобы переход не зависел от аналитики. */
+  function reportConversion(key, cb) {
+    var id = CONV[key];
+    if (!id || typeof window.gtag !== 'function') { if (cb) cb(); return; }
+    var fired = false;
+    var done = function () { if (fired) return; fired = true; if (cb) cb(); };
+    window.gtag('event', 'conversion', {
+      send_to: id,
+      value: 1.0,
+      currency: 'USD',
+      event_callback: done
+    });
+    if (cb) window.setTimeout(done, 900);
+  }
+
+  /* ============================================================
      5. Форма → WhatsApp (без бэкенда)
      ============================================================ */
   var form = document.getElementById('leadForm');
@@ -555,23 +583,32 @@
       if (msg) text += '\nКомментарий: ' + msg;
       var done = document.getElementById('formDone');
       if (done) done.hidden = false;
+      reportConversion('lead_form');
       window.open('https://wa.me/77475752520?text=' + encodeURIComponent(text), '_blank', 'noopener');
     });
   }
 
   /* ============================================================
-     6. Делегированные клики tel / WhatsApp
-        (чистые обработчики — сюда позже встанут gtag-конверсии)
+     6. Делегированные клики tel / WhatsApp - конверсии Google Ads
+        tel: переход откладываем до ответа gtag (страница на мобильном
+        может уйти в звонилку раньше, чем уйдёт запрос).
+        WhatsApp открывается в новой вкладке - страница жива, ждать не нужно.
      ============================================================ */
   document.addEventListener('click', function (e) {
     var call = e.target.closest('.js-call');
     if (call) {
-      /* gtag phone_call conversion — добавит Opus */
+      var href = call.getAttribute('href');
+      if (href && !e.defaultPrevented) {
+        e.preventDefault();
+        reportConversion('phone_call', function () { window.location.href = href; });
+      } else {
+        reportConversion('phone_call');
+      }
       return;
     }
     var wa = e.target.closest('.js-wa');
     if (wa) {
-      /* gtag whatsapp conversion — добавит Opus */
+      reportConversion('contact');
       return;
     }
   });
