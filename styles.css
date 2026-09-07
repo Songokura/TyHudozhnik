@@ -187,8 +187,34 @@ body.menu-open, body.no-scroll { overflow: hidden; }
 .stroke-svg { position: absolute; left: 0; right: 0; bottom: -14px; width: 100%; height: 22px; }
 .stroke-svg path { stroke-dasharray: 330; stroke-dashoffset: 330; animation: drawStroke 1.1s .5s cubic-bezier(.6,0,.3,1) forwards; }
 @keyframes drawStroke { to { stroke-dashoffset: 0; } }
-.hero-sub { font-size: 17.5px; color: var(--ink-soft); margin-bottom: 14px; }
-.hero-sub-em { font-family: var(--font-d); font-style: italic; color: var(--teal); font-size: 19px; }
+
+/* --- два формата обучения (в герое, сразу под заголовком) --- */
+.hero-formats { margin-bottom: 4px; }
+.hf-kick {
+  font-family: var(--font-d); font-style: italic; font-size: 19px;
+  color: var(--teal); margin-bottom: 14px;
+}
+.hf-grid { display: grid; grid-template-columns: .88fr 1.12fr; gap: 14px; }
+.hf-card {
+  position: relative; padding: 20px 20px 22px;
+  background: rgba(255,255,255,.72); border: 1px solid rgba(12,46,64,.12);
+  border-radius: 18px; backdrop-filter: blur(4px);
+  transition: transform .35s cubic-bezier(.4,0,.2,1), box-shadow .35s, border-color .35s;
+}
+.hf-card::before {
+  content: ""; position: absolute; left: 20px; right: 20px; top: 0; height: 3px;
+  border-radius: 0 0 3px 3px; background: var(--grad-sunset);
+  transform: scaleX(.34); transform-origin: 0 50%; transition: transform .45s cubic-bezier(.4,0,.2,1);
+}
+.hf-card.hf-b::before { background: linear-gradient(100deg, #17877E, #1D5C8A); }
+.hf-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-card); border-color: rgba(12,46,64,.2); }
+.hf-card:hover::before { transform: scaleX(1); }
+.hf-ico { display: block; font-size: 22px; line-height: 1; margin-bottom: 10px; }
+.hf-h {
+  font-family: var(--font-d); font-weight: 800; font-size: 20px; line-height: 1.2;
+  letter-spacing: .005em; margin-bottom: 8px;
+}
+.hf-p { font-size: 14.5px; line-height: 1.55; color: var(--ink-soft); }
 .hero-meta {
   font-size: 13.5px; letter-spacing: .02em; color: rgba(12,46,64,.6);
   margin: 18px 0 30px;
@@ -700,6 +726,10 @@ body.menu-open, body.no-scroll { overflow: hidden; }
   .mural-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; gap: 10px; }
   .hero-stats { gap: 18px 26px; }
   .hero-stats .num { font-size: 28px; }
+  .hf-grid { grid-template-columns: 1fr; gap: 12px; }
+  .hf-card { padding: 18px 18px 20px; }
+  .hf-h { font-size: 18.5px; }
+  .hf-p { font-size: 14px; }
   .lead-form { padding: 26px 20px; }
   .footer-in { flex-direction: column; align-items: flex-start; }
   .wa-float { width: 52px; height: 52px; right: 14px; bottom: 14px; }
@@ -751,6 +781,8 @@ body.menu-open, body.no-scroll { overflow: hidden; }
 html[lang="kk"] { --font-d: "Literata", "Playfair Display", Georgia, serif; }
 html[lang="kk"] .hero-title { font-size: clamp(30px, 4.05vw, 53px); line-height: 1.12; letter-spacing: 0; }
 html[lang="kk"] .h2 { font-size: clamp(25px, 3.2vw, 40px); }
+html[lang="kk"] .hf-h { font-size: 18.5px; }
+html[lang="kk"] .hf-p { font-size: 14px; }
 html[lang="kk"] .logo-text { font-size: 17.5px; }
 html[lang="kk"] .mobile-menu > a { font-size: clamp(21px, 5.4vw, 30px); }
 html[lang="kk"] .marquee-track { font-size: clamp(17px, 2.3vw, 25px); }
