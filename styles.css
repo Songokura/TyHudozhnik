@@ -470,7 +470,7 @@ body.menu-open, body.no-scroll { overflow: hidden; }
    ПЕДАГОГИ
    ============================================================ */
 .pedagogi { background: var(--paper); }
-.ped-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 26px; margin-top: 44px; align-items: start; }
+.ped-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 980px; margin: 44px auto 0; align-items: start; }
 .ped-card { text-align: center; padding: 0 8px; }
 .ped-photo {
   width: min(100%, 230px); aspect-ratio: 5 / 6; margin: 0 auto 20px; overflow: hidden;
@@ -671,7 +671,7 @@ body.menu-open, body.no-scroll { overflow: hidden; }
   .met-grid li:nth-child(5) { grid-column: span 2; }
   .reg-grid { grid-template-columns: repeat(2, 1fr); }
   .reg-iaia { grid-column: span 2; }
-  .ped-grid { grid-template-columns: repeat(2, 1fr); gap: 34px 22px; }
+  .ped-grid { gap: 34px 22px; }
   .price-grid, .sched-grid { grid-template-columns: 1fr; max-width: 640px; margin-left: auto; margin-right: auto; }
   .price-hot { order: -1; }
   .mural-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
@@ -701,7 +701,7 @@ body.menu-open, body.no-scroll { overflow: hidden; }
   .cf-small:hover { transform: rotate(-1.4deg) translateY(4px) scale(1.03); }
   .grid-2 { grid-template-columns: 1fr; gap: 40px; }
   .grid-2r figure { order: 0; }
-  .ped-grid { grid-template-columns: repeat(2, 1fr); gap: 34px 18px; }
+  .ped-grid { gap: 34px 18px; }
   .logo-wall { gap: 12px; }
   .logo-cell { flex-basis: calc((100% - 12px) / 2); min-height: 112px; padding: 18px 16px; border-radius: 15px; }
   .logo-cell img { max-width: min(calc(var(--lw, 190px) * .8), 100%); max-height: calc(var(--lh, 56px) * .8); }
