@@ -187,7 +187,8 @@
     'ct.kick': 'Contacts', 'ct.t1': 'Shall we start', 'ct.t2': 'with a blank canvas?',
     'ct.lead': 'Leave a request — WhatsApp will open with a ready message, just press send.',
     'ct.gis': 'Find us on 2GIS — 4.9 ★',
-    'fm.name': 'Your name', 'fm.dir': 'What are you interested in',
+    'fm.name': 'Your name', 'fm.phone': 'Phone', 'fm.phonePh': '+7 777 000 00 00',
+    'fm.dir': 'What are you interested in',
     'fm.o0': 'Trial lesson', 'fm.o1': 'Painting (acrylic / oil)', 'fm.o2': 'Academic drawing',
     'fm.o3': 'Technical drafting / exam prep', 'fm.o4': 'Batik', 'fm.o5': 'Felting',
     'fm.o6': 'Fashion illustration / anime', 'fm.o7': 'Classes for my child',
@@ -438,8 +439,11 @@
       var name = (document.getElementById('fmName').value || '').trim();
       var dir = document.getElementById('fmDir').value;
       var msg = (document.getElementById('fmMsg').value || '').trim();
+      var phoneEl = document.getElementById('fmPhone');
+      var phone = phoneEl ? (phoneEl.value || '').trim() : '';
       var text = 'Здравствуйте! Пишу с сайта «Ты художник».';
       if (name) text += '\nИмя: ' + name;
+      if (phone) text += '\nТелефон: ' + phone;
       text += '\nИнтересует: ' + dir;
       if (msg) text += '\nКомментарий: ' + msg;
       var done = document.getElementById('formDone');
