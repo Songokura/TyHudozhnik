@@ -165,6 +165,7 @@
     'b2b.g1': 'Hand-painted interiors', 'b2b.g2': 'Public spaces', 'b2b.g3': 'Cafes & restaurants',
     'b2b.g4': 'Graffiti & calligraphy', 'b2b.g5': 'Art panoramas', 'b2b.g6': 'Branded scenes',
     'b2b.g7': 'Schools & offices', 'b2b.g8': 'UV printing on glass', 'b2b.g9': 'Choosing paints for a project',
+    'b2b.price': 'from 10,000 ₸',
     'b2b.cta': 'Discuss a project',
 
     'tm.kick': 'For companies', 'tm.t1': 'Team building', 'tm.t2': 'with paint',
