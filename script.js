@@ -198,6 +198,15 @@
     'fm.done': 'Thank you! Opening WhatsApp — just press “Send”.',
 
     'ft.sub': 'School of painting and drawing · Merten Art Academy · Almaty',
+    'hw.kick': 'A party for kids aged 4-12', 'hw.t1': 'Halloween at Ty Hudozhnik:', 'hw.t2': 'October 26-31',
+    'hw.lead': 'A kind, fun party with nothing scary: two hours of art, games and a little magic. Kids paint, play, pose for photos and take home a craft they made themselves.',
+    'hw.inc': 'Included in the price',
+    'hw.l1': '2 hours with our teachers', 'hw.l2': 'Art workshop: ghosts, pumpkins, bats', 'hw.l3': 'Games, contests and sweet prizes',
+    'hw.l4': 'Photo zone and face painting', 'hw.l5': 'All materials included', 'hw.l6': 'A craft your child takes home',
+    'hw.f1': 'Dates', 'hw.f1v': 'October 26-31', 'hw.f2': 'Sessions start', 'hw.f3': 'Duration', 'hw.f3v': '2 hours',
+    'hw.f4': 'Venue', 'hw.f4v': '5 Luganskogo St.', 'hw.per': 'per child, no extra charges', 'hw.cta': 'Book a spot',
+    'hw.note': 'Spots are limited. Book by phone', 'hw.and': 'or WhatsApp', 'hw.ig': 'Party news on Instagram',
+    'hw.cap': 'A pumpkin painted at the workshop',
     'ft.rights': 'All rights reserved.'
   };
 
@@ -481,6 +490,32 @@
   /* ============================================================
      7. Мелочи
      ============================================================ */
+  /* Хэллоуин: блок сам прячется после даты из data-until; ролик-петля грузится,
+     только когда виден, и встаёт на паузу за кадром */
+  var hw = document.getElementById('hellouin');
+  if (hw) {
+    var until = Date.parse(hw.getAttribute('data-until') || '');
+    if (until && Date.now() >= until) {
+      hw.hidden = true;
+    } else {
+      var hwv = hw.querySelector('.hw-video');
+      if (hwv && !reduceMotion && 'IntersectionObserver' in window) {
+        hwv.addEventListener('playing', function () { hwv.classList.add('is-live'); });
+        new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) {
+              if (!hwv.getAttribute('src')) hwv.src = hwv.getAttribute('data-src');
+              var pr = hwv.play();
+              if (pr && pr.catch) pr.catch(function () { /* автозапуск запрещён - остаётся постер */ });
+            } else if (hwv.getAttribute('src')) {
+              hwv.pause();
+            }
+          });
+        }, { threshold: 0.35 }).observe(hwv);
+      }
+    }
+  }
+
   var y = document.getElementById('year');
   if (y) y.textContent = String(new Date().getFullYear());
 })();

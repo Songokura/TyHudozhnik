@@ -658,7 +658,7 @@ body.menu-open, body.no-scroll { overflow: hidden; }
   transition: transform .3s;
 }
 .wa-float:hover { transform: scale(1.1); }
-.wa-float svg { width: 30px; height: 30px; }
+.wa-float svg { width: 28px; height: 28px; display: block; flex: 0 0 auto; }
 
 /* ============================================================
    АДАПТИВ
@@ -811,4 +811,92 @@ html[lang="kk"] .clients-row li { font-size: 15px; }
   .rv, .reveal-img img { opacity: 1; transform: none; clip-path: none; }
   .stroke-svg path { stroke-dashoffset: 0; }
   .rev-rail { scroll-behavior: auto; }
+}
+
+/* ============================================================
+   ХЭЛЛОУИН 26-31.10 - сезонный блок, ночная палитра из ролика
+   (сине-фиолетовая драпировка + горчичный + тыква)
+   ============================================================ */
+.halloween {
+  background: radial-gradient(120% 90% at 85% 10%, #3A2C6E 0%, #221A48 45%, #150F2E 100%);
+  color: #EDE8FF; overflow: hidden; isolation: isolate;
+}
+.halloween[hidden] { display: none; }
+.halloween .h2-light .pf { color: #FFB347; }
+.hw-lead { font-size: 17px; color: rgba(237,232,255,.82); margin-bottom: 22px; }
+.hw-inc { font-size: 12.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #FFB347; margin-bottom: 4px; }
+.hw-list { margin: 12px 0 26px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 26px; }
+.hw-list li { color: #fff; font-size: 15.5px; }
+.hw-list li::before { background: rgba(255,179,71,.14); box-shadow: inset 0 0 0 1.5px #FFB347; }
+.hw-list li::after { border-color: #FFB347; }
+.hw-facts {
+  display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 0;
+  border: 1px solid rgba(237,232,255,.16); border-radius: 14px; margin-bottom: 26px;
+  background: rgba(255,255,255,.04);
+}
+.hw-facts > div { padding: 12px 18px; border-left: 1px solid rgba(237,232,255,.12); }
+.hw-facts > div:first-child { border-left: 0; }
+.hw-facts dt { font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: rgba(237,232,255,.55); margin-bottom: 2px; }
+.hw-facts dd { font-weight: 600; color: #fff; white-space: nowrap; }
+.hw-buy { display: flex; align-items: center; flex-wrap: wrap; gap: 14px 24px; margin-bottom: 16px; }
+.hw-price { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.hw-price b { font-family: var(--font-d); font-weight: 800; font-size: clamp(30px, 3.2vw, 40px); color: #FFB347; line-height: 1; }
+.hw-price span { font-size: 14px; color: rgba(237,232,255,.7); }
+.hw-note { font-size: 14px; color: rgba(237,232,255,.7); margin-bottom: 14px; }
+.hw-note a { color: #fff; font-weight: 600; white-space: nowrap; border-bottom: 1px solid rgba(255,179,71,.5); }
+.hw-note a:hover { color: #FFB347; }
+.hw-ig {
+  display: inline-flex; align-items: center; gap: 9px; font-size: 14px; color: rgba(237,232,255,.85);
+  padding: 9px 16px; border-radius: 999px; border: 1px solid rgba(237,232,255,.22); transition: border-color .25s, color .25s;
+}
+.hw-ig b { color: #fff; font-weight: 600; }
+.hw-ig:hover { border-color: #FFB347; color: #fff; }
+.hw-ig:focus-visible, .hw-note a:focus-visible { outline: 2px solid #FFB347; outline-offset: 3px; }
+
+.hw-frame { max-width: 420px; justify-self: center; transform: rotate(2.4deg); background: #FFFDF7; }
+.hw-frame:hover { transform: rotate(0deg) scale(1.015); }
+.hw-media { position: relative; aspect-ratio: 432 / 774; overflow: hidden; border-radius: 2px; background: #2A2150; }
+.hw-media img, .hw-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hw-video { opacity: 0; transition: opacity .4s ease; }
+.hw-video.is-live { opacity: 1; }
+
+/* фон: летучие мыши и тёплое свечение тыквы - только в стороне от фото */
+.hw-bats { position: absolute; inset: 0; pointer-events: none; z-index: -1; }
+.hw-bat { position: absolute; fill: #0B0820; opacity: .7; animation: hwFly 9s ease-in-out infinite; }
+.hw-bat1 { width: 64px; top: 9%; left: 46%; }
+.hw-bat2 { width: 40px; top: 20%; left: 54%; animation-delay: -3s; animation-duration: 11s; }
+.hw-bat3 { width: 50px; bottom: 12%; left: 4%; animation-delay: -6s; opacity: .4; }
+.hw-glow {
+  position: absolute; width: 520px; height: 520px; right: 4%; top: 50%; translate: 0 -50%;
+  background: radial-gradient(circle, rgba(255,140,40,.28), rgba(255,140,40,0) 65%); border-radius: 50%;
+}
+@keyframes hwFly {
+  0%, 100% { transform: translate(0, 0) rotate(-4deg) scaleY(1); }
+  25% { transform: translate(18px, -10px) rotate(3deg) scaleY(.8); }
+  50% { transform: translate(34px, 4px) rotate(-2deg) scaleY(1); }
+  75% { transform: translate(14px, 12px) rotate(4deg) scaleY(.8); }
+}
+
+@media (max-width: 1080px) {
+  .hw-facts { grid-template-columns: 1fr 1fr; }
+  .hw-facts > div { border-left: 0; border-top: 1px solid rgba(237,232,255,.12); }
+  .hw-facts > div:nth-child(-n+2) { border-top: 0; }
+  .hw-facts > div:nth-child(even) { border-left: 1px solid rgba(237,232,255,.12); }
+}
+@media (max-width: 860px) {
+  .halloween .hw-frame { order: -1; max-width: 250px; transform: rotate(1.5deg); }
+  .hw-glow { width: 360px; height: 360px; right: 50%; top: 16%; translate: 50% -50%; }
+  .hw-bat1 { left: 70%; top: 3%; }
+  .hw-bat2 { left: 12%; top: 6%; }
+}
+@media (max-width: 640px) {
+  .hw-list { grid-template-columns: 1fr; }
+  .hw-facts > div { padding: 11px 14px; }
+  .hw-facts dd { font-size: 15px; }
+  .hw-buy .btn { width: 100%; text-align: center; }
+  .hw-ig { display: flex; flex-wrap: wrap; font-size: 13px; border-radius: 16px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hw-bat { animation: none; }
+  .hw-frame:hover { transform: rotate(2.4deg); }
 }
