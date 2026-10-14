@@ -207,6 +207,7 @@
     'hw.f4': 'Venue', 'hw.f4v': '5 Luganskogo St.', 'hw.per': 'per child, no extra charges', 'hw.cta': 'Book a spot',
     'hw.note': 'Spots are limited. Book by phone', 'hw.and': 'or WhatsApp', 'hw.ig': 'Party news on Instagram',
     'hw.cap': 'A pumpkin painted at the workshop',
+    'hw.gal': 'Pumpkins painted by our students',
     'ft.rights': 'All rights reserved.'
   };
 
@@ -498,20 +499,50 @@
     if (until && Date.now() >= until) {
       hw.hidden = true;
     } else {
-      var hwv = hw.querySelector('.hw-video');
-      if (hwv && !reduceMotion && 'IntersectionObserver' in window) {
-        hwv.addEventListener('playing', function () { hwv.classList.add('is-live'); });
-        new IntersectionObserver(function (entries) {
+      if (!reduceMotion && 'IntersectionObserver' in window) {
+        var hwIo = new IntersectionObserver(function (entries) {
           entries.forEach(function (en) {
+            var v = en.target;
             if (en.isIntersecting) {
-              if (!hwv.getAttribute('src')) hwv.src = hwv.getAttribute('data-src');
-              var pr = hwv.play();
+              if (!v.getAttribute('src')) v.src = v.getAttribute('data-src');
+              var pr = v.play();
               if (pr && pr.catch) pr.catch(function () { /* автозапуск запрещён - остаётся постер */ });
-            } else if (hwv.getAttribute('src')) {
-              hwv.pause();
+            } else if (v.getAttribute('src')) {
+              v.pause();
             }
           });
-        }, { threshold: 0.35 }).observe(hwv);
+        }, { threshold: 0.35 });
+        hw.querySelectorAll('.hw-video').forEach(function (v) {
+          v.addEventListener('playing', function () { v.classList.add('is-live'); });
+          hwIo.observe(v);
+        });
+      }
+
+      /* гирлянда работ: на узком экране это лента, стрелки листают по одной карточке
+         и прячутся, когда всё влезло */
+      var hwRail = document.getElementById('hwRail');
+      var hwArrows = hw.querySelectorAll('.hw-arrow');
+      if (hwRail && hwArrows.length) {
+        var hwStep = function () {
+          var first = hwRail.firstElementChild;
+          var gap = parseFloat(getComputedStyle(hwRail).columnGap) || 0;
+          return first ? first.getBoundingClientRect().width + gap : hwRail.clientWidth * 0.8;
+        };
+        var hwSync = function () {
+          var max = hwRail.scrollWidth - hwRail.clientWidth - 2;
+          hwArrows.forEach(function (b) {
+            b.hidden = max <= 0;
+            b.disabled = parseInt(b.getAttribute('data-dir'), 10) < 0 ? hwRail.scrollLeft <= 2 : hwRail.scrollLeft >= max;
+          });
+        };
+        hwArrows.forEach(function (b) {
+          b.addEventListener('click', function () {
+            hwRail.scrollBy({ left: parseInt(b.getAttribute('data-dir'), 10) * hwStep(), behavior: reduceMotion ? 'auto' : 'smooth' });
+          });
+        });
+        hwRail.addEventListener('scroll', hwSync, { passive: true });
+        window.addEventListener('resize', hwSync);
+        hwSync();
       }
     }
   }
