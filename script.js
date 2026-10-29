@@ -463,7 +463,7 @@
         el.pause();
       }
     });
-  }, { rootMargin: '200px 0px' }) : null;
+  }, { rootMargin: '900px 0px' }) : null;
   document.querySelectorAll('iframe[data-src]').forEach(function (f) {
     if (lazyIo) lazyIo.observe(f); else f.src = f.getAttribute('data-src');
   });
