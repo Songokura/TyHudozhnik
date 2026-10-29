@@ -5,3 +5,6 @@ _project/
 _shots/
 _deploy/
 *.zip
+.impeccable/
+PRODUCT.md
+DESIGN.md
