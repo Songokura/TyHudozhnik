@@ -71,7 +71,7 @@
     'res.n3': '5&nbsp;of&nbsp;5', 'res.d3': 'in technical drawing',
     'res.d4': 'Admitted on a state grant',
     'ba.t': 'Before and after', 'ba.b': 'Before', 'ba.a': 'After',
-    'ba.phB': 'A student’s first work', 'ba.phA': 'A work after the course',
+    'ba.work': 'Academic drawing by a student', 'ba.phB': 'A student’s first work', 'ba.phA': 'A work after the course',
 
     'pr.t1': 'Programs', 'pr.t2': 'and prices',
     'pr.year': 'Yearly pass 25,000&nbsp;₸/month',
@@ -130,7 +130,7 @@
     'biz.t1': 'For', 'biz.t2': 'companies',
     'biz.c1': 'Team building with paint', 'biz.c1p': 'Your team takes home paintings of their own',
     'biz.c2': 'Wall painting and UV printing', 'biz.c2p': 'Interiors, cafes, schools and offices, from 10,000&nbsp;₸',
-    'biz.more': 'Learn more',
+    'biz.more1': 'Team building program', 'biz.more2': 'Mural examples',
 
     'faq.t1': 'Frequently asked', 'faq.t2': 'questions',
     'faq.q1': 'From what age can you study?', 'faq.a1': 'We take children from 5. For adults age does not matter: we teach from zero at 30 and at 60.',
@@ -245,6 +245,7 @@
   function toggleMenu(open) {
     var willOpen = typeof open === 'boolean' ? open : menu.hidden;
     /* шапка липкая под баннером: меню начинается сразу под её текущим низом */
+    document.body.classList.toggle('menu-open', willOpen);
     if (willOpen) menu.style.paddingTop = Math.round(header.getBoundingClientRect().bottom + 12) + 'px';
     menu.hidden = !willOpen;
     burger.classList.toggle('open', willOpen);

@@ -629,3 +629,54 @@ body.no-scroll { overflow: hidden; }
 .ba-title { margin-bottom: 14px; }
 .ba-one { max-width: 520px; }
 .ba-one .ba { aspect-ratio: 5 / 4; }
+
+/* ===== правки после ворот вкуса ===== */
+/* мазок - только на ключевых заголовках, в остальных курсив */
+.h2 .brush { display: none; }
+#uspehi .brush, #probnyj .brush, #kontakty .brush, #dlya-kogo .brush, .page-hero .brush { display: block; }
+.gis-stars svg { fill: none; }
+/* вкладки: активная - белая плашка, как переключатель языка */
+.tabs { background: var(--panel-2); }
+.tabs button[aria-selected="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 3px rgba(31, 27, 22, .16); }
+body.menu-open .topbar { display: none; }
+/* «Как решаем» - не карточки, а список на подложке с линиями */
+.sol { background: var(--panel); }
+.sol-grid { gap: 0; }
+.sol-grid li { background: transparent; border: 0; border-top: 1px solid rgba(31, 27, 22, .14); border-radius: 0; padding: 18px 2px; }
+.sol-grid svg { width: 34px; height: 34px; }
+@media (min-width: 600px) { .sol-grid { column-gap: 32px; } }
+@media (min-width: 1000px) {
+  .sol-grid li { min-height: 0; padding: 26px 4px 30px; }
+  .sol-grid p { font: 600 22px/1.3 var(--f-head); }
+}
+.pain { background: var(--bg); }
+.pain-grid li { background: #fff; }
+/* до/после + работа ученика в раме */
+.ba-row { display: grid; gap: 34px; align-items: center; }
+.ba-one { max-width: none; }
+.ba-work { transform: rotate(1.5deg); width: min(92%, 520px); justify-self: center; }
+.ba-work img { aspect-ratio: 651 / 397; }
+@media (min-width: 860px) { .ba-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; } }
+/* B2B: фото ниже */
+.biz-img { aspect-ratio: 16 / 8; }
+/* мобильный герой: фото сразу под заголовком */
+@media (max-width: 959px) {
+  .hero-in { gap: 0; }
+  .hero-copy { display: contents; }
+  .hero-sub { order: 1; }
+  .hero-title { order: 2; margin-bottom: 18px; }
+  .hero-art { order: 3; margin-bottom: 24px; }
+  .hero-points { order: 4; }
+  .hero-cta { order: 5; }
+  .hero-ig { order: 6; justify-self: start; }
+  .hero-photo { aspect-ratio: 4 / 3.3; border-radius: 140px 140px var(--r) var(--r); }
+  .hero-photo img { object-position: 45% 25%; }
+  .hang { width: 25%; }
+  .w2 { left: 37.5%; }
+  .hero-art { padding-bottom: 116px; }
+}
+@media (max-width: 599px) {
+  .hero-points { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+  .hero-points li { font-size: 14px; gap: 6px; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px 6px 8px; }
+  .hero-points svg { width: 20px; height: 20px; }
+}
