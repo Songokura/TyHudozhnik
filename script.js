@@ -25,7 +25,7 @@
   var TITLE_RU = document.title;
 
   var EN = {
-    'top.txt': 'Autumn groups are now enrolling. The first lesson is a trial', 'top.cta': 'Sign up',
+    'top.txt': 'Free trial lesson and a month of art materials', 'top.cta': 'Sign up',
     'logo.sub': 'drawing school · Almaty',
     'nav.price': 'Programs & prices', 'nav.dir': 'Programs', 'nav.res': 'Admissions', 'nav.ped': 'Teachers', 'nav.rev': 'Reviews',
     'nav.biz': 'For companies', 'nav.cts': 'Contacts', 'nav.cta': 'Trial lesson', 'nav.trial': 'Trial lesson', 'nav.faq': 'FAQ',
@@ -34,7 +34,8 @@
     'hero.t1': 'We teach drawing', 'hero.t2': 'from zero.',
     'hero.t3': 'Children, adults and those preparing for an art entrance exam',
     'hero.p1': 'Flexible schedule', 'hero.p2': 'Lessons stay valid for 2 months', 'hero.p3': 'All materials included',
-    'hero.cta1': 'Book a trial lesson', 'hero.cta2': 'Find your program',
+    'hero.free': 'Free trial lesson', 'hero.mat': 'Art materials for a month - free',
+    'hero.cta1': 'Book a free lesson', 'hero.cta2': 'Find your program',
     'hero.ig': 'Student works on Instagram',
     'hero.c1': 'Oil', 'hero.c2': 'Palette knife', 'hero.c3': 'Fashion illustration',
     'hero.tr1': '15 years', 'hero.tr2': 'on 2GIS', 'hero.tr3': 'UNESCO Club', 'hero.tr4': 'Students enter KazNAI and Abai University',
@@ -137,7 +138,7 @@
     'faq.q2': 'Do you need talent?', 'faq.a2': 'No. Drawing is a skill: construction, light and shade, proportion. We train the hand and eye with an academic program, and progress shows within a few lessons.',
     'faq.q3': 'How many people are in a group?', 'faq.a3': 'Groups are small and everyone works on their own project. The teacher comes to every easel and reviews each work personally.',
     'faq.q4': 'What should I bring?', 'faq.a4': 'Nothing. Paints, brushes, canvases, paper and aprons are waiting in the studio. Comfortable clothes are enough.',
-    'faq.q5': 'How much is a trial lesson?', 'faq.a5': 'We will tell you the trial price on WhatsApp: it depends on the program. Materials are included and you take the work home.',
+    'faq.q5': 'How much is a trial lesson?', 'faq.a5': 'The trial lesson is free, and art materials for the first month are free too. You take your work home.',
     'faq.q6': 'What if I miss a lesson?', 'faq.a6': 'The lesson is not lost: it waits for you for 2 months. Come any day from Wednesday to Sunday, 10:00-19:00.',
 
     'ct.t1': 'Shall we start with', 'ct.t2': 'a blank canvas?',
