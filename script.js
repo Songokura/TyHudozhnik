@@ -38,7 +38,7 @@
     'hero.cta1': 'Book a free lesson', 'hero.cta2': 'Find your program',
     'hero.ig': 'Student works on Instagram',
     'hero.c1': 'Oil', 'hero.c2': 'Palette knife', 'hero.c3': 'Fashion illustration',
-    'hero.tr1': '15 years', 'hero.tr2': 'on 2GIS', 'hero.tr3': 'UNESCO Club', 'hero.tr4': 'Students enter KazNAI and Abai University',
+    'hero.tr1': '15 years', 'hero.tr2': 'on 2GIS', 'hero.tr3': 'UNESCO Club', 'hero.tr5': 'State program Damubala.kz', 'hero.tr4': 'Students enter KazNAI and Abai University',
 
     'hw.kick': 'A party for kids aged 4-12', 'hw.t1': 'Halloween at Ty Hudozhnik:', 'hw.t2': 'October 26-31',
     'hw.lead': 'A kind party with nothing scary: two hours of art, games and a little magic. Kids paint, play, pose for photos and take home a craft they made themselves.',
@@ -68,10 +68,10 @@
 
     'res.t1': 'Our students', 'res.t2': 'get in',
     'res.n1': '85&nbsp;of&nbsp;100', 'res.d1': 'Abai University',
-    'res.n2': '1st&nbsp;place', 'res.d2': 'boarding school at KazNAI',
+    'res.n2': '1st&nbsp;place', 'res.d2': 'college at Zhurgenov KazNAI',
     'res.n3': '5&nbsp;of&nbsp;5', 'res.d3': 'in technical drawing',
     'res.d4': 'Admitted on a state grant',
-    'ba.t': 'Before and after', 'ba.b': 'Before', 'ba.a': 'After',
+    'ba.t': 'Before and after', 'ba.t2': 'Students and their works', 'ba.b': 'Before', 'ba.a': 'After',
     'ba.work': 'Academic drawing by a student', 'ba.phB': 'A student’s first work', 'ba.phA': 'A work after the course',
 
     'pr.t1': 'Programs', 'pr.t2': 'and prices',
@@ -103,7 +103,7 @@
     'ped.t1': 'Teachers who', 'ped.t2': 'paint themselves',
     'ped.r1': 'Founder of the school',
     'ped.1': 'Co-founder of IAIA, international director for cultural and educational projects, member of the Eurasian Union of Designers.',
-    'ped.cap': 'A work by our teachers',
+    'ped.cap': 'A teacher’s work: sanguine portrait',
     'ped.2': 'Art teacher, member of IAIA and KazNPU, expert, jewelry designer.',
     'ped.3': 'Graduate of the Zhurgenov Kazakh National Academy of Arts, Painting, Sculpture and Design.',
 
@@ -113,7 +113,7 @@
     'rev.a2': 'Sofia’s mother', 'rev.r2': '85 of 100 · Abai University, Fine Arts',
     'rev.q1': 'I recommend the studio for fast-track exam preparation. In a short time my teenager improved his drawing and learned technical drawing to university requirements, though we started practically from zero. A clear, to-the-point program, attention to detail and, as a result, admission.',
     'rev.a1': 'Svetlana D.', 'rev.r1': 'exam preparation',
-    'rev.s1': 'Boarding school at KazNAI: first on the list',
+    'rev.s1': 'College at KazNAI: first on the list',
     'rev.s2': '5 of 5 in technical drawing and a place in design',
     'rev.s3': '“I got a state grant. Thank you for the preparation!”',
     'rev.s4': 'School at the Zhurgenov Academy, 7th grade',
@@ -126,7 +126,7 @@
     'tr.t1': 'They', 'tr.t2': 'trust us',
     'tr.u': 'UNESCO Club', 'tr.up': 'The school is part of the UNESCO clubs movement',
     'tr.ip': 'International art alliance, co-founded by Dina Mertenova',
-    'tr.d': '“Damu”', 'tr.dp': 'We work under the state support program',
+    'tr.dp': 'Provider under the state per-capita funding program for children’s creative clubs',
 
     'biz.t1': 'For', 'biz.t2': 'companies',
     'biz.c1': 'Team building with paint', 'biz.c1p': 'Your team takes home paintings of their own',

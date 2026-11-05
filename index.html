@@ -43,7 +43,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/hero-girl.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=20261030-1">
+  <link rel="stylesheet" href="styles.css?v=20261105-1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -213,7 +213,7 @@
     </div>
     <div class="wrap">
       <p class="hero-trust">
-        <span data-i18n="hero.tr1">15 лет</span><i aria-hidden="true">·</i><a href="https://2gis.kz/almaty/geo/9429940001401993" target="_blank" rel="noopener"><b>4.9</b> <span data-i18n="hero.tr2">в 2ГИС</span></a><i aria-hidden="true">·</i><span data-i18n="hero.tr3">Клуб ЮНЕСКО</span><i aria-hidden="true">·</i><span data-i18n="hero.tr4">Поступают в КазНАИ и АГУ</span>
+        <span data-i18n="hero.tr1">15 лет</span><i aria-hidden="true">·</i><a href="https://2gis.kz/almaty/geo/9429940001401993" target="_blank" rel="noopener"><b>4.9</b> <span data-i18n="hero.tr2">в 2ГИС</span></a><i aria-hidden="true">·</i><span data-i18n="hero.tr3">Клуб ЮНЕСКО</span><i aria-hidden="true">·</i><a class="tr-damu" href="https://damubala.kz" target="_blank" rel="noopener" data-i18n="hero.tr5">Госпрограмма Damubala.kz</a><i aria-hidden="true">·</i><span data-i18n="hero.tr4">Поступают в КазНАИ и АГУ</span>
       </p>
     </div>
   </section>
@@ -322,7 +322,7 @@
       <h2 class="h2" id="resTitle"><span data-i18n="res.t1">Наши ученики</span> <em class="brush-word"><span data-i18n="res.t2">поступают</span><svg class="brush" viewBox="0 0 300 26" preserveAspectRatio="none" aria-hidden="true"><path d="M4 15.5C38 8.5 92 6 151 7.2c56 1.2 104 3.6 144 5.4 2.6.2 2.9 4.4.3 4.7-48 5.8-97 4.6-148 4-48-.6-95 1.2-140 3.8-4.4.3-6.4-8-3.7-9.6z"/></svg></em></h2>
       <ul class="res-grid">
         <li class="rv"><b class="res-num" data-i18n="res.n1">85&nbsp;из&nbsp;100</b><span data-i18n="res.d1">АГУ им. Абая</span></li>
-        <li class="rv"><b class="res-num" data-i18n="res.n2">1&nbsp;место</b><span data-i18n="res.d2">интернат при КазНАИ</span></li>
+        <li class="rv"><b class="res-num" data-i18n="res.n2">1&nbsp;место</b><span data-i18n="res.d2">колледж при КазНАИ им.&nbsp;Жургенова</span></li>
         <li class="rv"><b class="res-num" data-i18n="res.n3">5&nbsp;из&nbsp;5</b><span data-i18n="res.d3">по черчению</span></li>
         <li class="rv"><b class="res-num res-ico"><svg aria-hidden="true"><use href="#i-cap"/></svg></b><span data-i18n="res.d4">Поступила на грант</span></li>
       </ul>
@@ -336,11 +336,18 @@
               <figure class="frame ba-shot"><span class="ba-tag ba-tag-a" data-i18n="ba.a">После</span><img src="assets/ba-after.webp" width="720" height="960" alt="Ученица с портретом маслом на холсте" loading="lazy" decoding="async"></figure>
             </div>
           </div>
-          <figure class="frame ba-work rv">
-            <img src="assets/hero-drawing.webp" width="651" height="397" alt="Работа ученика: академический рисунок, построение глаза, носа и губ" loading="lazy" decoding="async">
-            <figcaption data-i18n="ba.work">Академический рисунок ученика</figcaption>
-          </figure>
+          <div>
+            <p class="ba-title" data-i18n="ba.t2">Ученики и их работы</p>
+            <div class="ba-pair">
+              <figure class="frame ba-shot"><img src="assets/student-portrait-oil.webp" width="720" height="960" alt="Ученица с женским портретом маслом на холсте" loading="lazy" decoding="async"></figure>
+              <figure class="frame ba-shot"><img src="assets/student-silhouette.webp" width="720" height="960" alt="Ученица с картиной: силуэт в фиолетовой шляпе на жёлтом фоне" loading="lazy" decoding="async"></figure>
+            </div>
+          </div>
         </div>
+        <figure class="frame ba-work rv">
+          <img src="assets/hero-drawing.webp" width="651" height="397" alt="Работа ученика: академический рисунок, построение глаза, носа и губ" loading="lazy" decoding="async">
+          <figcaption data-i18n="ba.work">Академический рисунок ученика</figcaption>
+        </figure>
       </div>
     </div>
   </section>
@@ -482,8 +489,8 @@
           <p class="ped-role" data-i18n="ped.r1">Основатель школы</p>
           <p data-i18n="ped.1">Сооснователь IAIA, международный директор по культурным и образовательным проектам, член Евразийского союза дизайнеров.</p>
           <figure class="frame ped-work">
-            <img src="assets/mural-landscape.webp" width="900" height="1200" alt="Горный пейзаж с хвойным лесом, работа педагогов школы" loading="lazy" decoding="async">
-            <figcaption data-i18n="ped.cap">Работа педагогов школы</figcaption>
+            <img src="assets/teacher-sanguine.webp" width="600" height="800" alt="Портрет девушки в профиль сангиной, работа педагога школы" loading="lazy" decoding="async">
+            <figcaption data-i18n="ped.cap">Работа педагога: портрет сангиной</figcaption>
           </figure>
         </div>
       </div>
@@ -524,7 +531,7 @@
           <p data-i18n="rev.q1">Рекомендую студию для срочной подготовки к творческим экзаменам. Подросток за короткий срок подтянул рисунок и освоил черчение по требованиям вуза, хотя начинали мы практически с нуля. Чёткая программа «по делу», внимание к деталям и как результат - поступление.</p>
           <footer><b data-i18n="rev.a1">Светлана Д.</b><span data-i18n="rev.r1">подготовка к творческим экзаменам</span></footer>
         </li>
-        <li><button type="button" class="shot js-shot" data-src="assets/review-shot-1.webp"><img src="assets/review-shot-1.webp" width="591" height="1020" alt="Переписка: ученица поступила в интернат при КазНАИ им. Жургенова первой в списке" loading="lazy" decoding="async"><span class="shot-zoom" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span></button><p class="shot-cap" data-i18n="rev.s1">Интернат при КазНАИ: первое место в списке</p></li>
+        <li><button type="button" class="shot js-shot" data-src="assets/review-shot-1.webp"><img src="assets/review-shot-1.webp" width="591" height="1020" alt="Переписка: ученица поступила в колледж при КазНАИ им. Жургенова первой в списке" loading="lazy" decoding="async"><span class="shot-zoom" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span></button><p class="shot-cap" data-i18n="rev.s1">Колледж при КазНАИ: первое место в списке</p></li>
         <li><button type="button" class="shot js-shot" data-src="assets/review-shot-2.webp"><img src="assets/review-shot-2.webp" width="591" height="1000" alt="Переписка: 5 баллов из 5 за черчение и поступление на дизайн" loading="lazy" decoding="async"><span class="shot-zoom" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span></button><p class="shot-cap" data-i18n="rev.s2">5 из 5 по черчению и поступление на дизайн</p></li>
         <li><button type="button" class="shot js-shot" data-src="assets/review-shot-3.webp"><img src="assets/review-shot-3.webp" width="591" height="980" alt="Переписка: ученица поступила на грант" loading="lazy" decoding="async"><span class="shot-zoom" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span></button><p class="shot-cap" data-i18n="rev.s3">«Я поступила на грант. Спасибо за подготовку!»</p></li>
         <li><button type="button" class="shot js-shot" data-src="assets/review-shot-4.webp"><img src="assets/review-shot-4.webp" width="739" height="897" alt="Переписка: ученица поступила в школу имени Жургенова в 7 класс" loading="lazy" decoding="async"><span class="shot-zoom" aria-hidden="true"><svg><use href="#i-zoom"/></svg></span></button><p class="shot-cap" data-i18n="rev.s4">Школа при Академии им. Жургенова, 7 класс</p></li>
@@ -548,7 +555,7 @@
       <ul class="badges">
         <li class="rv"><img src="assets/logo-unesco.webp" width="148" height="142" alt="Национальная федерация клубов ЮНЕСКО Казахстана" loading="lazy" decoding="async"><div><b data-i18n="tr.u">Клуб ЮНЕСКО</b><span data-i18n="tr.up">Школа входит в движение клубов ЮНЕСКО</span></div></li>
         <li class="rv"><img src="assets/iaia.webp" width="420" height="429" alt="Эмблема IAIA - International Art Innovation Alliance" loading="lazy" decoding="async"><div><b>IAIA</b><span data-i18n="tr.ip">Международный арт-альянс, Дина Мертенова - сооснователь</span></div></li>
-        <li class="rv"><span class="badge-ico"><svg aria-hidden="true"><use href="#i-hand"/></svg></span><div><b data-i18n="tr.d">«Даму»</b><span data-i18n="tr.dp">Работаем по госпрограмме поддержки</span></div></li>
+        <li class="rv"><img src="assets/logo-damubala.webp" width="607" height="504" alt="DamuBala" loading="lazy" decoding="async"><div><b><a href="https://damubala.kz" target="_blank" rel="noopener">Damubala.kz</a></b><span data-i18n="tr.dp">Поставщик госпрограммы подушевого финансирования детских творческих кружков</span></div></li>
       </ul>
     </div>
     <div class="marquee" aria-label="Клиенты и партнёры школы">
@@ -679,6 +686,6 @@
   <img id="lbImg" alt="">
 </div>
 
-<script src="script.js?v=20261030-1" defer></script>
+<script src="script.js?v=20261105-1" defer></script>
 </body>
 </html>

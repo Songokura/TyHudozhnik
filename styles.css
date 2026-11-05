@@ -710,3 +710,11 @@ body.menu-open .topbar { display: none; }
   .hero-art { order: 4; }
   .hero-points { order: 5; } .hero-cta { order: 6; } .hero-ig { order: 7; }
 }
+
+/* 05.11.2026: Damubala в строке доверия героя, вторая пара фото учеников */
+.hero-trust a.tr-damu { color: #fff; background: var(--terra-d); padding: 3px 10px; border-radius: 999px; font-weight: 700; white-space: nowrap; }
+.hero-trust a.tr-damu:hover { background: #8A2E12; }
+.badges b a { color: inherit; text-decoration: none; }
+.badges b a:hover { color: var(--terra-d); }
+.ba-wrap > .ba-work { display: block; margin: 44px auto 0; }
+@media (max-width: 600px) { .hero-trust i { display: none; } .hero-trust { gap: 8px 16px; align-items: center; } }
