@@ -27,6 +27,24 @@
   var EN = {
     'top.txt': 'Free trial lesson and a month of art materials', 'top.cta': 'Sign up',
     'logo.sub': 'drawing school · Almaty',
+    'nav.ny': 'New Year: workshops and gift cards',
+    'ny.bar.cert': 'New Year gift certificate', 'ny.bar.mk': 'Workshops', 'ny.bar.corp': 'Corporate parties',
+    'ny.kick': 'New Year at Ty Hudozhnik', 'ny.t': 'Paint your own <em>New Year</em>',
+    'ny.lead': 'Three holiday formats: a workshop for kids and adults, a creative corporate party and a gift certificate.',
+    'ny.c.tag': 'Gift', 'ny.c.t': 'Gift certificate',
+    'ny.c.lead': 'A gift that ends up as a painting on the wall. A personal certificate for New Year, a birthday or any occasion, for kids and adults alike.',
+    'ny.c.l1': 'For a workshop or a watercolour, oil or acrylic course', 'ny.c.l2': 'Valid until March', 'ny.c.l3': 'Book any day that suits you',
+    'ny.c.price': 'from 10&nbsp;000&nbsp;₸', 'ny.c.pn': 'we will match your budget', 'ny.c.cta': 'Order a certificate',
+    'ny.cv.t': 'Gift certificate', 'ny.cv.n': 'for', 'ny.cv.w': 'workshop · course',
+    'ny.m.art': 'Winter night, one of the subjects', 'ny.m.tag': 'Kids and adults', 'ny.m.t': 'New Year workshops',
+    'ny.m.lead': 'A holiday painting made by your own hand in one evening. No experience needed: the teacher helps at every step, and you take the painting home.',
+    'ny.m.s1': 'Christmas ornaments', 'ny.m.s2': 'Winter landscape', 'ny.m.s3': 'Snowman', 'ny.m.s4': 'New Year tree', 'ny.m.s5': 'Winter night',
+    'ny.m.f1': 'Wed-Sun, 10:00 and 15:00', 'ny.m.f2': '5 Luganskogo St.', 'ny.m.f3': 'Limited places',
+    'ny.m.per': 'materials, teacher and treats included', 'ny.m.cta': 'Book a spot',
+    'ny.k.tag': 'Companies and groups', 'ny.k.t': 'A New Year corporate party, brush in hand',
+    'ny.k.lead': 'A creative workshop for your team or a kids group, at our studio or at your venue. Everyone paints their own picture and leaves with a handmade gift.',
+    'ny.k.l1': 'Groups from 10 people', 'ny.k.l2': 'On site we bring easels, paints and aprons and decorate the room', 'ny.k.l3': 'Can be held together with your banquet', 'ny.k.l4': 'Price calculated for your group',
+    'ny.k.note': 'Book December dates before December 20: they go fast', 'ny.k.cta': 'Book a date',
     'nav.price': 'Programs & prices', 'nav.dir': 'Programs', 'nav.res': 'Admissions', 'nav.ped': 'Teachers', 'nav.rev': 'Reviews',
     'nav.biz': 'For companies', 'nav.cts': 'Contacts', 'nav.cta': 'Trial lesson', 'nav.trial': 'Trial lesson', 'nav.faq': 'FAQ',
 
@@ -469,19 +487,16 @@
     if (lazyIo) lazyIo.observe(f); else f.src = f.getAttribute('data-src');
   });
 
-  /* Хэллоуин: блок сам прячется после даты из data-until */
-  var hw = document.getElementById('hellouin');
-  if (hw) {
-    var until = Date.parse(hw.getAttribute('data-until') || '');
-    if (until && Date.now() >= until) {
-      hw.hidden = true;
-    } else if (lazyIo && !reduceMotion) {
-      hw.querySelectorAll('.hw-video').forEach(function (v) {
-        v.addEventListener('playing', function () { v.classList.add('is-live'); });
-        lazyIo.observe(v);
-      });
+  /* Сезонные блоки (Новый год): прячутся после даты из data-until; вместо новогоднего баннера - обычный */
+  document.querySelectorAll('[data-until]').forEach(function (el) {
+    var until = Date.parse(el.getAttribute('data-until') || '');
+    if (!until || Date.now() < until) return;
+    el.hidden = true;
+    if (el.classList.contains('topbar-ny')) {
+      var def = document.querySelector('.topbar-def');
+      if (def) def.hidden = false;
     }
-  }
+  });
 
   /* ============================================================
      10. Конверсии Google Ads (тег грузится только на боевом домене)

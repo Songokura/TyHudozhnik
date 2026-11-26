@@ -43,7 +43,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/hero-girl.webp" fetchpriority="high">
-  <link rel="stylesheet" href="styles.css?v=20261105-1">
+  <link rel="stylesheet" href="styles.css?v=20261126-1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -118,12 +118,19 @@
     <symbol id="i-zoom" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5M11 8.5v5M8.5 11h5"/></g></symbol>
     <symbol id="i-unesco" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z"/></g></symbol>
     <symbol id="i-hand" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 13.5l4-3.5c1-.8 2.3-.8 3.2 0l1.8 1.5h4c1 0 1.5 1.2.8 1.9l-.6.6H12"/><path d="M3.5 19.5l3-2h7.5l6-5.5c.8-.8-.1-2.1-1.1-1.6l-3.4 1.6"/></g></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="8.5" width="17" height="4" rx="1"/><path d="M5 12.5v8h14v-8M12 8.5v12M12 8.5c-1.5-3.5-5.5-4.5-6-2s3 2 6 2zm0 0c1.5-3.5 5.5-4.5 6-2s-3 2-6 2z"/></g></symbol>
     <symbol id="i-pin-nail" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2" fill="currentColor"/></symbol>
   </defs>
 </svg>
 
-<!-- ============ БЛОК 1. БАННЕР ============ -->
-<aside class="topbar" aria-label="Объявление">
+<!-- ============ БЛОК 1. БАННЕР (до 08.01.2027 новогодний, потом снова «пробный урок») ============ -->
+<aside class="topbar topbar-ny" data-until="2027-01-08T00:00:00+05:00" aria-label="Новогодние предложения">
+  <div class="wrap ny-bar">
+    <a class="ny-cert" href="#ng-sertifikat"><svg class="ny-gift" width="20" height="20" aria-hidden="true"><use href="#i-gift"/></svg><span class="ny-shine" data-i18n="ny.bar.cert">Подарочный сертификат на Новый год</span></a>
+    <span class="ny-links"><a href="#ng-master-klassy" data-i18n="ny.bar.mk">Мастер-классы</a><i aria-hidden="true">·</i><a href="#ng-korporativ" data-i18n="ny.bar.corp">Корпоративы и выезд</a></span>
+  </div>
+</aside>
+<aside class="topbar topbar-def" aria-label="Объявление" hidden>
   <div class="wrap topbar-in">
     <p class="topbar-txt" data-i18n="top.txt">Пробный урок и материалы на месяц - бесплатно</p>
     <a class="topbar-cta" href="#kontakty" data-i18n="top.cta">Записаться</a>
@@ -160,6 +167,7 @@
 
 <nav class="mmenu" id="mobileMenu" aria-label="Мобильное меню" hidden>
   <div class="mmenu-in">
+    <a class="mm-ny" href="#novyj-god" data-i18n="nav.ny">Новый год: мастер-классы и сертификаты</a>
     <a href="#tseny" data-i18n="nav.price">Направления и цены</a>
     <a href="#uspehi" data-i18n="nav.res">Поступления</a>
     <a href="#probnyj" data-i18n="nav.trial">Пробный урок</a>
@@ -218,46 +226,100 @@
     </div>
   </section>
 
-  <!-- ============ ХЭЛЛОУИН (26-31.10.2026, блок сам прячется с 01.11) ============ -->
-  <section class="section hw" id="hellouin" data-until="2026-11-01T00:00:00+05:00" aria-labelledby="hwTitle">
-    <div class="wrap hw-in">
-      <div class="hw-text">
-        <p class="kicker" data-i18n="hw.kick">Праздник для детей 4-12 лет</p>
-        <h2 class="h2" id="hwTitle"><span data-i18n="hw.t1">Хэллоуин в «Ты художник»:</span> <em data-i18n="hw.t2">26-31 октября</em></h2>
-        <p class="hw-lead" data-i18n="hw.lead">Добрый праздник без страшилок: два часа творчества, игр и волшебства. Ребёнок рисует, играет, фотографируется и уносит домой поделку, которую сделал сам.</p>
-        <ul class="hw-list">
-          <li data-i18n="hw.l2">Мастер-класс: привидения, тыквы, летучие мыши</li>
-          <li data-i18n="hw.l3">Игры, конкурсы и сладкие призы</li>
-          <li data-i18n="hw.l4">Фотозона и аквагрим</li>
-          <li data-i18n="hw.l5">Все материалы включены</li>
-        </ul>
-        <p class="hw-facts"><span>10:00 · 13:00 · 15:00</span><span data-i18n="hw.f3v">2 часа</span><span data-i18n="hw.f4v">ул. Луганского, 5</span></p>
-        <div class="hw-buy">
-          <p class="hw-price"><b>10&nbsp;000&nbsp;₸</b> <span data-i18n="hw.per">за ребёнка, без доплат</span></p>
-          <a class="btn btn-terra js-wa" data-conv="whatsapp" href="https://wa.me/77475752520?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%20%D1%80%D0%B5%D0%B1%D1%91%D0%BD%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%A5%D1%8D%D0%BB%D0%BB%D0%BE%D1%83%D0%B8%D0%BD%20%2826-31%20%D0%BE%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8F%29" target="_blank" rel="noopener" data-i18n="hw.cta">Записаться на праздник</a>
-        </div>
-      </div>
-      <figure class="hw-media">
-        <img src="assets/halloween-poster.webp?v=2" width="464" height="832" alt="Девочка в костюме ведьмы держит тыкву, расписанную на занятии" loading="lazy" decoding="async">
-        <video class="hw-video" muted loop playsinline preload="none" data-src="assets/halloween-loop.mp4?v=2" aria-hidden="true"></video>
-      </figure>
-    </div>
+  <!-- ============ НОВЫЙ ГОД (до 08.01.2027, блок сам прячется) ============ -->
+  <section class="section ny" id="novyj-god" data-until="2027-01-08T00:00:00+05:00" aria-labelledby="nyTitle">
+    <div class="ny-snow" aria-hidden="true"></div>
     <div class="wrap">
-      <div class="rail-head">
-        <p class="hw-gal" data-i18n="hw.gal">Тыквы наших учеников</p>
-        <div class="rail-nav" data-rail="hwRail">
-          <button type="button" class="rail-btn" data-dir="-1" aria-label="Назад"><svg aria-hidden="true"><use href="#i-prev"/></svg></button>
-          <button type="button" class="rail-btn" data-dir="1" aria-label="Вперёд"><svg aria-hidden="true"><use href="#i-next"/></svg></button>
+      <p class="kicker" data-i18n="ny.kick">Новый год в «Ты художник»</p>
+      <h2 class="h2" id="nyTitle" data-i18n="ny.t">Нарисуйте свой <em>Новый год</em></h2>
+      <p class="ny-lead" data-i18n="ny.lead">Три праздничных формата: мастер-класс для детей и взрослых, творческий корпоратив и подарочный сертификат.</p>
+
+      <article class="ny-cert-card" id="ng-sertifikat" aria-labelledby="ngCertT">
+        <div class="ny-txt">
+          <p class="ny-tag" data-i18n="ny.c.tag">Подарок</p>
+          <h3 class="ny-h3" id="ngCertT" data-i18n="ny.c.t">Подарочный сертификат</h3>
+          <p data-i18n="ny.c.lead">Подарок, который останется картиной на стене. Именной сертификат на Новый год, день рождения и любой праздник - и детям, и взрослым.</p>
+          <ul class="ny-list">
+            <li data-i18n="ny.c.l1">На мастер-класс или курс акварели, масла или акрила</li>
+            <li data-i18n="ny.c.l2">Действует до марта</li>
+            <li data-i18n="ny.c.l3">По записи в любой удобный день</li>
+          </ul>
+          <div class="ny-buy">
+            <p class="ny-price"><b data-i18n="ny.c.price">от 10&nbsp;000&nbsp;₸</b> <span data-i18n="ny.c.pn">подберём под ваш бюджет</span></p>
+            <a class="btn btn-terra js-wa" data-conv="whatsapp" href="https://wa.me/77475752520?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D1%8C%20%D0%BF%D0%BE%D0%B4%D0%B0%D1%80%D0%BE%D1%87%D0%BD%D1%8B%D0%B9%20%D1%81%D0%B5%D1%80%D1%82%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%82%20%D0%BD%D0%B0%20%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%B3%D0%BE%D0%B4" target="_blank" rel="noopener"><svg class="ico-wa" width="20" height="20" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i18n="ny.c.cta">Заказать сертификат</span></a>
+          </div>
         </div>
+        <div class="ny-cert-wrap rv" aria-hidden="true">
+          <div class="cert">
+            <span class="cert-ribbon"></span>
+            <span class="cert-bow"><i></i><i></i></span>
+            <img class="cert-logo" src="assets/logo-sun.webp" width="48" height="48" alt="" loading="lazy" decoding="async">
+            <span class="cert-school">Ты&nbsp;художник</span>
+            <span class="cert-title" data-i18n="ny.cv.t">Подарочный сертификат</span>
+            <span class="cert-name"><span data-i18n="ny.cv.n">на имя</span><i></i></span>
+            <span class="cert-what" data-i18n="ny.cv.w">мастер-класс · курс</span>
+            <span class="cert-shine"></span>
+          </div>
+        </div>
+      </article>
+
+      <div class="ny-grid">
+        <article class="ny-card" id="ng-master-klassy" aria-labelledby="ngMkT">
+          <div class="ny-art">
+            <svg class="ny-paint" viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Зимняя ночь: заснеженные холмы, ёлки и снеговик под луной">
+              <defs>
+                <linearGradient id="nySky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#14205C"/><stop offset=".65" stop-color="#3B4FA6"/><stop offset="1" stop-color="#7F8FD0"/></linearGradient>
+                <radialGradient id="nyMoon" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFF6D6"/><stop offset=".55" stop-color="#F6D98A" stop-opacity=".55"/><stop offset="1" stop-color="#F6D98A" stop-opacity="0"/></radialGradient>
+              </defs>
+              <rect width="400" height="260" fill="url(#nySky)"/>
+              <circle cx="318" cy="62" r="58" fill="url(#nyMoon)"/>
+              <circle cx="318" cy="62" r="21" fill="#FFF4CF"/>
+              <g fill="#FFF4CF" class="ny-stars"><circle cx="40" cy="30" r="1.6"/><circle cx="96" cy="58" r="1.2"/><circle cx="150" cy="22" r="1.8"/><circle cx="214" cy="48" r="1.2"/><circle cx="252" cy="18" r="1.5"/><circle cx="372" cy="128" r="1.2"/><circle cx="20" cy="96" r="1.2"/><circle cx="186" cy="92" r="1"/></g>
+              <path d="M0 178C60 150 120 146 190 164s130 10 210-18V260H0z" fill="#C9D3F2"/>
+              <path d="M0 206c70-26 150-30 220-10s120 12 180-6V260H0z" fill="#EEF2FC"/>
+              <g fill="#1C3B3A"><path d="M62 170l-20 34h12l-15 22h46l-15-22h12z"/><path d="M98 158l-16 28h10l-13 20h38l-13-20h10z" opacity=".85"/><path d="M352 168l-17 30h10l-13 20h40l-13-20h10z"/></g>
+              <g fill="#F7F9FF"><path d="M62 170l-9 15c5 2 13 2 18 0z"/><path d="M352 168l-8 14c5 2 11 2 16 0z"/></g>
+              <g class="ny-snowman"><circle cx="230" cy="216" r="22" fill="#FFFFFF"/><circle cx="230" cy="182" r="15" fill="#FFFFFF"/><path d="M216 170h28l-4-14h-20z" fill="#2B2B33"/><path d="M230 182l14 3-14 3z" fill="#E8792B"/><circle cx="225" cy="178" r="1.8" fill="#2B2B33"/><circle cx="235" cy="178" r="1.8" fill="#2B2B33"/><path d="M216 196c8 5 20 5 28 0l2 7c-10 5-22 5-32 0z" fill="#E2552B"/></g>
+              <g fill="#E8A93A"><circle cx="70" cy="196" r="2.6"/><circle cx="56" cy="212" r="2.6"/><circle cx="82" cy="214" r="2.6"/><circle cx="360" cy="196" r="2.6"/></g>
+            </svg>
+            <span class="ny-frame-lbl" data-i18n="ny.m.art">Зимняя ночь - один из сюжетов</span>
+          </div>
+          <div class="ny-body">
+            <p class="ny-tag" data-i18n="ny.m.tag">Детям и взрослым</p>
+            <h3 class="ny-h3" id="ngMkT" data-i18n="ny.m.t">Новогодние мастер-классы</h3>
+            <p data-i18n="ny.m.lead">Праздничная картина своими руками за один вечер. Опыт не нужен: педагог поможет на каждом шаге, а картину вы заберёте домой.</p>
+            <ul class="ny-chips" aria-label="Сюжеты">
+              <li data-i18n="ny.m.s1">Ёлочные игрушки</li><li data-i18n="ny.m.s2">Зимний пейзаж</li><li data-i18n="ny.m.s3">Снеговик</li><li data-i18n="ny.m.s4">Новогодняя ёлка</li><li data-i18n="ny.m.s5">Зимняя ночь</li>
+            </ul>
+            <p class="ny-facts"><span data-i18n="ny.m.f1">Ср-Вс, 10:00 и 15:00</span><span data-i18n="ny.m.f2">ул. Луганского, 5</span><span data-i18n="ny.m.f3">Места ограничены</span></p>
+            <div class="ny-buy">
+              <p class="ny-price"><b>12&nbsp;000&nbsp;₸</b> <span data-i18n="ny.m.per">материалы, помощь педагога и угощение включены</span></p>
+              <a class="btn btn-terra js-wa" data-conv="whatsapp" href="https://wa.me/77475752520?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F%20%D0%BD%D0%B0%20%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%D0%B4%D0%BD%D0%B8%D0%B9%20%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80-%D0%BA%D0%BB%D0%B0%D1%81%D1%81" target="_blank" rel="noopener"><svg class="ico-wa" width="20" height="20" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i18n="ny.m.cta">Записаться</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="ny-card" id="ng-korporativ" aria-labelledby="ngCorpT">
+          <div class="ny-art ny-photo">
+            <img src="assets/gallery-hall.webp" width="941" height="627" alt="Группа рисует за мольбертами на мастер-классе в студии" loading="lazy" decoding="async">
+          </div>
+          <div class="ny-body">
+            <p class="ny-tag" data-i18n="ny.k.tag">Компаниям и группам</p>
+            <h3 class="ny-h3" id="ngCorpT" data-i18n="ny.k.t">Новогодний корпоратив с кистью в руках</h3>
+            <p data-i18n="ny.k.lead">Творческий мастер-класс для коллектива или детской группы - у нас в студии или с выездом к вам. Каждый напишет свою картину и уйдёт с подарком, сделанным своими руками.</p>
+            <ul class="ny-list">
+              <li data-i18n="ny.k.l1">Группы от 10 человек</li>
+              <li data-i18n="ny.k.l2">На выезд привозим мольберты, краски и фартуки, празднично оформляем зал</li>
+              <li data-i18n="ny.k.l3">Можно провести вместе с банкетом</li>
+              <li data-i18n="ny.k.l4">Стоимость рассчитаем под вашу группу</li>
+            </ul>
+            <p class="ny-note"><svg width="18" height="18" aria-hidden="true"><use href="#i-hourglass"/></svg><span data-i18n="ny.k.note">Даты на декабрь бронируйте до 20 декабря - их разбирают быстро</span></p>
+            <div class="ny-buy">
+              <a class="btn btn-terra js-wa" data-conv="whatsapp" href="https://wa.me/77475752520?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%82%D0%B8%D0%BC%20%D0%BD%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE%D0%B4%D0%BD%D0%B8%D0%B9%20%D0%BA%D0%BE%D1%80%D0%BF%D0%BE%D1%80%D0%B0%D1%82%D0%B8%D0%B2%20%D1%81%20%D0%BC%D0%B0%D1%81%D1%82%D0%B5%D1%80-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%BE%D0%BC.%20%D0%9D%D0%B0%D1%81%20%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%BD%D0%BE%20...%20%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%2C%20%D0%B4%D0%B0%D1%82%D0%B0%20..." target="_blank" rel="noopener"><svg class="ico-wa" width="20" height="20" aria-hidden="true"><use href="#ic-wa"/></svg><span data-i18n="ny.k.cta">Забронировать дату</span></a>
+            </div>
+          </div>
+        </article>
       </div>
-      <ul class="rail hw-rail" id="hwRail" tabindex="0" aria-label="Тыквы, расписанные учениками студии">
-        <li><button type="button" class="shot js-shot" data-src="assets/hw-pumpkin-1.webp"><img src="assets/hw-pumpkin-1-sm.webp" width="480" height="600" alt="Мальчик с расписанной тыквой-фонарём" loading="lazy" decoding="async"></button></li>
-        <li><button type="button" class="shot js-shot" data-src="assets/hw-pumpkin-2.webp"><img src="assets/hw-pumpkin-2-sm.webp" width="480" height="600" alt="Мальчик держит тыкву, расписанную в красный" loading="lazy" decoding="async"></button></li>
-        <li><div class="shot hw-lantern"><img src="assets/hw-lantern-poster.webp" width="464" height="832" alt="Мальчик в темноте держит светящуюся тыкву-фонарь" loading="lazy" decoding="async"><video class="hw-video" muted loop playsinline preload="none" data-src="assets/hw-lantern-loop.mp4" aria-hidden="true"></video></div></li>
-        <li><button type="button" class="shot js-shot" data-src="assets/hw-pumpkin-3.webp"><img src="assets/hw-pumpkin-3-sm.webp" width="480" height="600" alt="Девочка с зелёной тыквой-монстром, которую расписала сама" loading="lazy" decoding="async"></button></li>
-        <li><button type="button" class="shot js-shot" data-src="assets/hw-pumpkin-4.webp"><img src="assets/hw-pumpkin-4-sm.webp" width="480" height="600" alt="Весёлая тыква с глазами и зубами" loading="lazy" decoding="async"></button></li>
-        <li><button type="button" class="shot js-shot" data-src="assets/hw-pumpkin-5.webp"><img src="assets/hw-pumpkin-5-sm.webp" width="480" height="600" alt="Белая тыква-череп" loading="lazy" decoding="async"></button></li>
-      </ul>
     </div>
   </section>
 
@@ -686,6 +748,6 @@
   <img id="lbImg" alt="">
 </div>
 
-<script src="script.js?v=20261105-1" defer></script>
+<script src="script.js?v=20261126-1" defer></script>
 </body>
 </html>
