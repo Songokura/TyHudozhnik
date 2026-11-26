@@ -27,6 +27,7 @@
   var EN = {
     'top.txt': 'Free trial lesson and a month of art materials', 'top.cta': 'Sign up',
     'logo.sub': 'drawing school · Almaty',
+    'ny.h.t': 'New Year gift certificate', 'ny.h.s': 'A gift that is valid until spring',
     'nav.ny': 'New Year: workshops and gift cards',
     'ny.bar.cert': 'New Year gift certificate', 'ny.bar.mk': 'Workshops', 'ny.bar.corp': 'Corporate parties',
     'ny.kick': 'New Year at Ty Hudozhnik', 'ny.t': 'Paint your own <em>New Year</em>',
