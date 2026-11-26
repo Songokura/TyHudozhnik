@@ -843,3 +843,59 @@ body.menu-open .topbar { display: none; }
 .cert-fir { position: absolute; z-index: 2; width: min(60%, 270px); height: auto; top: -10px; left: 2%; overflow: visible; transform: rotate(-8deg); pointer-events: none; filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .35)); }
 .cert { background-image: radial-gradient(circle at 12% 80%, rgba(201, 162, 75, .18) 0 3px, transparent 4px), radial-gradient(circle at 88% 85%, rgba(201, 162, 75, .18) 0 3px, transparent 4px), linear-gradient(135deg, #FFF8E6 0%, #F7E7C0 55%, #EFD9A4 100%); }
 
+
+/* ---------- Новый год: гирлянда огней, снежинки, подарки (26.11.2026) ---------- */
+.ny { padding-bottom: 150px; }
+.ny-lights {
+  position: absolute; top: 4px; left: 0; right: 0; height: 44px; display: flex; overflow: hidden; pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='44'%3E%3Cpath d='M0 6Q28 30 56 6' fill='none' stroke='%23131B42' stroke-width='2'/%3E%3C/svg%3E") repeat-x;
+}
+.ny-lights i { flex: 0 0 56px; position: relative; }
+.ny-lights i::before { content: ""; position: absolute; left: 50%; top: 15px; width: 4px; height: 5px; margin-left: -2px; background: #3B3B44; border-radius: 1px; }
+.ny-lights i::after { content: ""; position: absolute; left: 50%; top: 19px; width: 9px; height: 13px; margin-left: -4.5px; border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%; background: var(--c); box-shadow: 0 0 10px 3px var(--c); }
+.ny-lights i:nth-child(4n+1) { --c: #FF6B4A; }
+.ny-lights i:nth-child(4n+2) { --c: #FFD66B; }
+.ny-lights i:nth-child(4n+3) { --c: #7FD38F; }
+.ny-lights i:nth-child(4n+4) { --c: #8FA8FF; }
+.ny-garland { z-index: 1; }
+.ny-flakes { position: absolute; inset: 0; pointer-events: none; }
+.ny-flakes .fl { position: absolute; color: #DCE3F7; opacity: .4; }
+.ny-flakes .fl:nth-child(n+7) { display: none; }
+.ny-sparks { position: relative; height: 0; top: -58px; margin-left: min(70%, 520px); }
+.ny-sparks svg { position: absolute; color: #F6D98A; }
+.ny-bottom { position: absolute; left: 0; right: 0; bottom: 0; height: 130px; pointer-events: none; }
+.ny-drift { position: absolute; left: 0; bottom: -1px; width: 100%; height: 70px; }
+.ny-pile { position: absolute; bottom: 22px; display: flex; align-items: flex-end; }
+.ny-pile-l { left: 3%; }
+.ny-pile-r { right: 3%; }
+.ny-pile-r .g3, .ny-pile-r .ny-tr { display: none; }
+.ny-tr { width: 66px; height: 99px; margin: 0 -6px; filter: drop-shadow(0 6px 6px rgba(0, 0, 0, .25)); }
+.gf { overflow: visible; margin: 0 -2px; filter: drop-shadow(0 6px 6px rgba(0, 0, 0, .25)); }
+.gf.g1 { width: 46px; height: 46px; }
+.gf.g2 { width: 34px; height: 34px; transform: rotate(-6deg); }
+.gf.g3 { width: 40px; height: 40px; transform: rotate(5deg); }
+@media (min-width: 860px) {
+  .ny { padding-bottom: 190px; }
+  .ny-flakes .fl:nth-child(n+7) { display: block; }
+  .ny-flakes .fl { opacity: .5; }
+  .ny-bottom { height: 170px; }
+  .ny-drift { height: 90px; }
+  .ny-pile { bottom: 30px; }
+  .ny-pile-l { left: 6%; } .ny-pile-r { right: 6%; }
+  .ny-pile-r .g3, .ny-pile-r .ny-tr { display: block; }
+  .ny-tr { width: 92px; height: 138px; }
+  .gf.g1 { width: 62px; height: 62px; } .gf.g2 { width: 46px; height: 46px; } .gf.g3 { width: 54px; height: 54px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ny-lights i::after { animation: nyBulb 2.4s ease-in-out infinite; }
+  .ny-lights i:nth-child(3n+2)::after { animation-delay: -.8s; }
+  .ny-lights i:nth-child(3n)::after { animation-delay: -1.6s; }
+  .ny-flakes .fl { animation: nyFlake 14s linear infinite; }
+  .ny-sparks svg { animation: nySpark 2.2s ease-in-out infinite; }
+  .ny-tr { animation: nyTree 5s ease-in-out infinite; transform-origin: 50% 100%; }
+}
+@keyframes nyBulb { 0%, 100% { opacity: 1; } 50% { opacity: .3; } }
+@keyframes nyFlake { from { transform: translateY(-8px) rotate(0deg); } 50% { transform: translateY(8px) rotate(180deg); } to { transform: translateY(-8px) rotate(360deg); } }
+@keyframes nySpark { 0%, 100% { transform: scale(.4) rotate(0deg); opacity: .3; } 50% { transform: scale(1) rotate(45deg); opacity: 1; } }
+@keyframes nyTree { 0%, 100% { transform: rotate(-1.5deg); } 50% { transform: rotate(1.5deg); } }
+@media (min-width: 1100px) { .ny-sparks { margin-left: 720px; top: -70px; } .ny-sparks svg { transform-origin: center; } }
